@@ -48,10 +48,6 @@ img{
   overflow:hidden;
   font-family:'Lato', sans-serif;
 }
-/* h2{
-  text-align: center;
-  font-family:'Playfair display', sans-serif;
-}*/
 .cards-grid{
   display: flex;
   gap: 80px;
@@ -61,6 +57,7 @@ img{
   width: 320px;
   height: 504px;
   perspective: 1000px; 
+  justify-content: center;
 }
 
 .flip-card-inner {
@@ -124,3 +121,6 @@ img{
 .flip-card:hover .flip-card-inner {
   transform: rotateY(180deg); 
 }
+
+
+
