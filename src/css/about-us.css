@@ -1,0 +1,55 @@
+h1{
+    display: flex;
+    justify-content: center; 
+    font-family:'Playfair display', sans-serif;
+    
+}
+.Card{
+    display: flex;
+    justify-content: center;
+    gap:20px;
+}
+.card{
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    width: 100%;
+    border: 5px solid rgb(135, 185, 229);
+    background-color: rgb(245, 242, 246);
+    padding: 20px;
+    margin: 0; 
+    border-radius: 20px;
+    flex-basis: calc(25% - 20px); 
+    box-sizing: border-box; 
+    
+  }
+  .container{
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .card figure{
+    text-align: center;
+    margin: 20px 0 0 0;
+  }
+  img{
+    /*margin:  0 2rem 0 2rem;*/
+    max-width: 100%;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
+  }
+  .card p{
+    margin: 20px;       
+    padding-left: 0;       
+    padding-right: 20px;   
+    text-align: left;  
+    text-align: start; 
+    overflow:hidden;
+    font-family:'Lato', sans-serif;
+  }
+  h2{
+    text-align: center;
+    font-family:'Playfair display', sans-serif;
+  }
