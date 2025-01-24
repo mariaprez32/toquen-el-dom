@@ -1,9 +1,10 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About-us</title>
+    <link rel="stylesheet" href="main.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
     <link
@@ -21,45 +22,85 @@
     <h1>Nuestros profesores</h1>
     <main class="Card">
         <card class="card">
-            <figure>
-                <img src="../public/images/maria.jpg" alt="avatar María" width="140">
-            </figure>
-            <div class="content"  >
-                <h2>María</h2>
-                <p> Me presentó soy María, me encanta tocar el piano, siempre me han dicho que con mi música transporto a la gente a la antigua Venecia. ¿Te atreves a comprobarlo?</p>
+            <div class="cards-grid">
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <figure>
+                                <img src="../public/images/piano.jpg" alt="avatar Piano" width="140">
+                            </figure>
+                        </div>
+                        <div class="flip-card-back">
+                            <h2>MARÍA</h2>
+                                <figure>
+                                    <img src="../public/images/maria.jpg" alt="avatar María" width="140">
+                                </figure>
+                                <p> Me presentó soy María, me encanta tocar el piano, siempre me han dicho que con mi música transporto a la gente a la antigua Venecia. ¿Te atreves a comprobarlo?</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </card>
-                <card class="card">
-                    <figure>
-                        <img src="../public/images/falo.png" alt="avatar Falo" width="140">
-                    </figure>
-                    <div class="content"  >
-                        <h2>Falo</h2>
-                        <p> Yo soy Rafael, aunque me gusta que me llamén Falo. Soy el profesor de guitarra y conmigo podrás aprender a tocar la canción que quieras. Aunque a mi lo más que me gusta es el flamenco. </p>
-                    </div> 
-                </card>
-                <card class="card">
-                    <figure>
-                        <img src="../public/images/saturnino.webp" alt="avatar Saturnino" width="140">
-                    </figure>
-                    <div class="content"  >
-                        <h2>Saturnino</h2>
-                        <p> Saturnino, yo soy vuestro baterista de confianza. Siempre estoy en busca de nuevos sonidos y experimentos musicales que desafíen los límites. ¿Te animas a realizar la busqueda conmigo? </p>
-                    </div> 
-                </card>
-                <card class="card">
-                    <figure>
-                        <img src="../public/images/Cristina.jpeg" alt="avatar Cristina" width="140">
-                    </figure>
-                    <div class="content"  >
-                        <h2>Cristina</h2>
-                        <p> Hola, yo soy Cristina. Soy una saxofonista con más de 10 años de experiencia en el escenario, pero ahora estoy aquí para trasmitirme mi pasión por la música. </p>
-                    </div> 
-                </card>
-
-    
-        </main>
+        <card class="card">
+            <div class="cards-grid">
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <figure>
+                                <img src="../public/images/guitarra.webp" alt="avatar Guitarra" width="140">
+                            </figure>
+                        </div>
+                        <div class="flip-card-back">
+                            <h2>Falo</h2>
+                                <figure>
+                                    <img src="../public/images/falo.png" alt="avatar Falo" width="140">
+                                </figure>
+                                <p>Yo soy Rafael, aunque me gusta que me llamén Falo. Soy el profesor de guitarra y conmigo podrás aprender a tocar la canción que quieras. Aunque a mi lo más que me gusta es el flamenco.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </card>
+        <card class="card">
+            <div class="cards-grid">
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <figure>
+                                <img src="../public/images/bateria.avif" alt="avatar Batería" width="140">
+                            </figure>
+                        </div>
+                        <div class="flip-card-back">
+                            <h2>Saturnino</h2>
+                                <figure>
+                                    <img src="../public/images/saturnino.webp" alt="avatar Saturnino" width="140">
+                                </figure>
+                                <p>Yo soy vuestro baterista de confianza. Siempre estoy en busca de nuevos sonidos y experimentos musicales que desafíen los límites. ¿Te animas a realizar la busqueda conmigo?</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </card> <card class="card">
+            <div class="cards-grid">
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <figure>
+                                <img src="../public/images/saxo.webp" alt="avatar Saxofon" width="140">
+                            </figure>
+                        </div>
+                        <div class="flip-card-back">
+                            <h2>Cristina</h2>
+                                <figure>
+                                    <img src="../public/images/Cristina.jpeg" alt="avatar Cristina" width="140">
+                                </figure>
+                                <p>Hola, yo soy Cristina. Soy una saxofonista con más de 10 años de experiencia en el escenario, pero ahora estoy aquí para trasmitirme mi pasión por la música.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </card>
+    </main>
 
 </body>
-
 </html>
