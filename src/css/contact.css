@@ -3,63 +3,88 @@
     --secondary-color: white;
 }
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
+    font-family: 'Lato', 'Playfair display';
+    margin: 10px;
+    padding: 10px;
     background-color: var(--secondary-color);
     color: var(--primary-color);
 }
 
-/* formulario */
-.contact-form__container {
-    width: 50%;
-    margin: 50px auto;
-    background-color: var(--secondary-color);
-    padding: 30px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px --primary-color;
+.formulario {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    
 }
-
-.contact-form__title {
-    text-align: center;
-    color: #5a5a5a;
+.form--contenedor__bizq {
+    width: 300px;
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover;
 }
-
-.contact-form {
+.form--contenedor__bdcho {
+    width: 100%;
+    max-width: 500px;
+}
+.contactoFormulario {
     display: flex;
     flex-direction: column;
+    gap: 15px;
 }
-
-.contact-form__label {
-    margin-bottom: 5px;
+.Contacto-form__label {
     font-weight: bold;
+    margin-bottom: 5px;
 }
-
-.contact-form__input,
-.contact-form__textarea {
+.Contacto-form__input,.Contacto-form__textoarea {
+    width: 100%;
     padding: 10px;
-    margin-bottom: 15px;
     border: 1px solid #ccc;
-    border-radius: 4px;
+    border-radius: 5px;
     font-size: 1rem;
 }
-
-.contact-form__textarea {
-    resize: vertical;
-}
-
-/* Estilo del botón */
-.contact-form__button {
-    padding: 10px;
+.Contacto-form__boton {
     background-color: var(--primary-color);
     color: var(--secondary-color);
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
+    padding: 10px 15px;
+    border: 1px solid black;
+    border-radius: 5px;
     font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+.Contacto-form__boton:hover {
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
 }
 
-/* Modificación del estilo del botón en hover */
-.contact-form__button:hover {
-    background-color: #acddfa;
+/* Estilo para los campos con error */
+.error-border {
+    border: 2px solid red; /* Cambia el color del borde */
+    background-color: #ffe6e6; /* Fondo ligeramente rojizo */
 }
+
+
+
+/* Responsive */
+@media (max-width: 750px) {
+    .formulario {
+        flex-direction: column; 
+        align-items: center;
+    }
+
+    .form--contenedor__bizq {
+        width: 100%; /* Ocupa todo el ancho disponible */
+        text-align: center; 
+        margin-bottom: 20px; 
+    }
+
+    .form--contenedor__bdcho {
+        width: 100%; 
+        text-align: left; 
+        margin-bottom: 20px; 
+        margin-bottom: 0; 
+    }
+}
+

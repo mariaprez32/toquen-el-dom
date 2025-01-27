@@ -4,30 +4,46 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contacto</title>
-    <link rel="stylesheet" href="./src/css/contact.css">
-
+    <link rel="stylesheet" href="../src/css/contact.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
+        rel="stylesheet">
 </head>
 <body>
     <header>
 
     </header>   
-    <main>
-        <div class="contact-form__container">
-            <h1 class="contact-form__title">Formulario de Contacto</h1>
-            <form action="mailto:tu-email@example.com" method="post" enctype="text/plain" class="contact-form">
-                <label for="name" class="contact-form__label">Nombre:</label>
-                <input type="text" id="name" name="name" required class="contact-form__input">
-    
-                <label for="email" class="contact-form__label">Correo Electrónico:</label>
-                <input type="email" id="email" name="email" required class="contact-form__input">
-    
-                <label for="message" class="contact-form__label">Mensaje:</label>
-                <textarea id="message" name="message" rows="4" required class="contact-form__textarea"></textarea>
-    
-                <button type="submit" class="contact-form__button">Enviar</button>
+    <div class="formulario">
+        <div class="form--contenedor__bizq">
+            <h1>Contacto</h1>
+            <p> Puedes ponerte en contacto con nosotros a través de este formulario, por teléfono, o visitando nuestras instalaciones.</p>
+            <p>📞 985 123 456</p>
+            <p>✉ informacion@musica.com</p>
+        </div>
+        <div class="form--contenedor__bdcho">
+            <h4>Si necesitas más información, rellena el siguiente formulario de contacto y te responderemos lo antes posible</h4>
+            <form id="contactoFormulario" class="Contacto-form">
+                <label for="nombre" class="Contacto-form__label">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" required class="Contacto-form__input">
+
+                <label for="correo" class="Contacto-form__label">Correo electrónico:</label>
+                <input type="email" id="correo" name="correo" required class="Contacto-form__input">
+
+                <label for="mensaje" class="Contacto-form__label">Mensaje:</label>
+                <textarea id="mensaje" name="mensaje" rows="4" required class="Contacto-form__textoarea"></textarea>
+
+                <button type="button" id="enviar" class="Contacto-form__boton">Enviar</button>
             </form>
         </div>
-    </main>
+    </div>        
+     <script src="../src/js/contact.js"></script>
     
     <footer>
         
