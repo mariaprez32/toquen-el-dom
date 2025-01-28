@@ -1,3 +1,4 @@
+
 h1{
   display: flex;
   justify-content: center; 
@@ -7,22 +8,22 @@ h1{
 .Card{
   display: flex;
   justify-content: center;
-  gap:20px;
+  gap:10px;
   flex-wrap: wrap;
-  padding: 20px;
+  padding-left: 0;
 }
 .card{
   display: flex;
   flex-direction: column;
   height: auto;
   width: 100%;
-  border: 5px; 
-  background-color: rgb(245, 242, 246);
+  border: 5px;
+ background-color: rgb(245, 242, 246);
   padding: 20px;
-  margin: 0; 
+  margin: 0px;
   border-radius: 20px;
   flex-basis: calc(25% - 20px); 
-  box-sizing: border-box; 
+  box-sizing: border-box;
 }
 .container{
   display: flex;
@@ -55,16 +56,8 @@ img{
   gap: 80px;
 }
 /*FLIP CARD*/
-/*.flip-card {
-  width: 320px;
-  height: 504px;
-  perspective: 1000px; 
-  justify-content: center;
-}*/
-
-/*FLIP CARD*/
 .flip-card {
-  width: 80;
+  width: 320px;
   height: 504px;
   perspective: 1000px; 
   justify-content: center;
@@ -88,8 +81,7 @@ img{
   display: flex;
   justify-content: center;
   align-items: center;
-  border-radius: 28px;
-  
+  border-radius: 28px; 
 }
 .flip-card-front {
   background-color: #fff;
@@ -104,7 +96,7 @@ img{
   justify-content: center; 
   align-items: center;  
   height: 100%;                 
-  padding: 20px;               
+  padding: 20px;          
   border-radius: 28px;
 }
 .flip-card-back img {
@@ -137,28 +129,22 @@ body {
   font-size: 16px;
   margin: 0;
 }
-@media (max-width: 708px) {
-  body {
-    font-size: 14px;
-  }
+/*MEDIA QUERIES*/
+/*Pantallas medianas (tablets, entre 768px y 1024px)*/
+@media (min-width: 768px) and (max-width: 1024px) {
+  .card {
+    flex-basis: calc(50% - 10px);  
 
-  .Card {
-    padding: 10px;
-    flex-direction: column;
-  }
+}
+/* En pantallas más pequeñas (móviles, por debajo de 768px) */
+@media (max-width: 768px) {
+  .card {
+    flex-basis: 100%;  
 
-  .flip-card-front, .flip-card-back{
-    width: 100%;
-    align-items: center;
   }
-
-@media (min-width: 769px) {
-  body {
-    font-size: 18px;
+  .Card{
+    /*margin:auto;*/
+    padding: auto;
   }
-
-  .Card {
-    padding: 20px;
-  }
-} 
+}
 }
