@@ -87,8 +87,9 @@ body {
     width: 300px;
     height: auto;
     border-radius: 10px;
-    object-fit: cover;
+   
 }
+
 .form--contenedor__bdcho {
     width: 100%;
     max-width: 500px;
@@ -167,6 +168,17 @@ body {
     display: flex;
     gap: 1.5rem;
     justify-content: center ; 
+   
+
+}
+
+.footer__social--link i {
+    font-size: 2rem; 
+    transition: transform 0.3s ease-in-out; 
+}
+
+.footer__social--link:hover i {
+    transform: scale(1.2); 
 }
 
 span {
@@ -174,6 +186,7 @@ span {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+
 /* Estilo para los campos con error */
 .error-border {
     border: 2px solid red; /* Cambia el color del borde */
