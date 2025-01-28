@@ -6,11 +6,18 @@ document.addEventListener("DOMContentLoaded", () => {
     function esValidoCorreo(email) {
         const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         return emailRegex.test(email);
+        /* 
+         	^[^\s@]+: Verifica que la parte inicial no contenga espacios en blanco ni el símbolo @.
+        	@[^\s@]+: Requiere que haya un @ seguido de texto.
+        	\.[^\s@]+$: Verifica que haya un punto (.) seguido de texto (el dominio, como .com o .es).
+
+        */
     }
 
     // Mostrar errores en los campos
-    function mostrarError(campo) {
+    function mostrarError(campo, mensajeError) {
         campo.classList.add("error-border");
+        /*  escribir el mensaje en el campo*/
     }
 
     // Quitar errores en los campos
@@ -29,7 +36,7 @@ document.addEventListener("DOMContentLoaded", () => {
         let formularioValido = true;
 
         if (!nombre.value.trim()) {
-            mostrarError(nombre);
+            mostrarError(nombre, mensajeError);
             formularioValido = false;
         }
 
