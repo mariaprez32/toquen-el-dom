@@ -10,14 +10,13 @@
 }
 
 body{
-    font-family:'Times New Roman', Times, serif;
     scroll-behavior: smooth;
     line-height: 1.6;
-    background: linear-gradient(135deg,#fff 50%, #000 50%);
     min-height: 100vh;
     width: 100%;
     display: flex;
     flex-direction: column;
+    
 }
 
 a{
@@ -32,14 +31,19 @@ img{
     max-width: 100%;
 }
 
+/* Navbar */
+
 .navbar{
     padding: 1rem 2rem;
-    position: sticky;
+    width: 100%;
+    background-color: var(--secondary-color);
+    position: fixed;
     z-index: 1000;
 }
 
 .navbar__container{
     width: 100%;
+    height: 3rem;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
@@ -47,9 +51,285 @@ img{
 }
 
 .navbar__logo img {
-    width: 90px;
-    height: 70px;
+    width: 80px;
+    height: 60px;
     
+}
+
+.navbar__menu--list{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    font-weight: 500;
+}
+
+.navbar__menu--link{
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 1.1rem;
+    font-weight: lighter;
+    color: var(--primary-color);
+    font-family: 'Playfair display', sans-serif;
+}
+
+.navbar__menu--link:hover{
+    color:#387184;
+}
+
+/* Hero */
+
+.hero{
+    background: var(--primary-color) url('../../public/images/Fondo\ musical\ guitarra\ acústica.jpg')
+     no-repeat center / cover;
+    height: 800px;
+    width: 100%;
+    padding: 11.5rem 2rem 8rem;
+    color: var(--secondary-color);
+    overflow-x: hidden;
+    position: relative;
+    display: flex;
+}
+
+.hero__container{
+    display: flex;
+    justify-content: center;
+    height: 700;
+    width: 100vh;
+    align-items: center;
+    gap: 3rem;
+    padding-left: 10rem;
+
+}
+
+.hero__title1{
+    font-size: 1.6rem;
+    font-family:'Lato', sans-serif;
+    text-align: center;
+}
+
+.hero__title2{
+    font-size: 4rem;
+    font-family:'Playfair display', sans-serif;
+    margin-bottom: 1rem;
+    text-align: center;
+    background: linear-gradient(to right, #ef5350, #f48fb1, #7e57c2, #2196f3, #26c6da, #43a047, #eeff41, #f9a825, #ff5722);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hero__description{
+    font-size: 1.2rem;
+    font-family: 'Lato', sans-serif;
+    line-height: 1.8;
+    text-align: justify;
+    color: var(--secondary-color);
+
+}
+
+.hero__button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+
+.hero__button button {
+    padding: 10px 30px;
+    /* background-color: var(--secondary-color); */
+    color: var(--primary-color);
+    font-size:1.1rem;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-top: 30px;
+}
+
+
+.hero button {background-image: linear-gradient(to right, #00c3ff 0%, #ffff1c  51%, #00c3ff  100%)}
+.hero button {
+   margin: 10px;
+   padding: 15px 45px;
+   text-align: center;
+   transition: 0.5s;
+   background-size: 200% auto;   
+   border-radius: 10px;
+   display: block;
+ }
+
+ .hero button:hover {
+   background-position: right center; 
+   text-decoration: none;
+ }
+
+
+.hero__image{
+    width: 100%;
+}
+
+
+/* Intruments cards */
+
+.instrument__container {
+    width: auto;
+    margin: 100px auto;
+    padding: 0 20px;
+}
+
+.container1{
+    display: flex;
+    padding: 25px;
+    gap: 50px;
+}
+
+.instrument__piano, .instrument__guitarra, .instrument__bateria, .instrument__saxofon {
+    /* background-color: black; */
+    margin: 20px 0;
+    padding: 20px 20px 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+} 
+
+.instrument__piano h2, .instrument__guitarra h2, .instrument__bateria h2, .instrument__saxofon h2{
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
+
+.instrument__piano p, .instrument__guitarra p, .instrument__bateria p, .instrument__saxofon p{
+    font-size: 1.1rem;
+    color: var(--primary-color);
+    margin-bottom: 30px;
+}
+
+
+.card__container{
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card__container p{
+    font-family: 'Lato', sans-serif;
+    color: rgb(53, 51, 51);
+}
+
+.instrument__piano{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.instrument__piano img{
+    width: 190px;
+    height: 220px;
+    object-fit: cover;
+}
+
+.card {
+    width: 400px;
+}
+
+.card__container button {
+    font-size: 18px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    display: inline-block;
+    text-align: center;
+    font-weight: bold;
+    padding: 0.7em 2em;
+    border: 3px solid #FF0072;
+    border-radius: 2px;
+    position: relative;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.1);
+    color: black ;
+    text-decoration: none;
+    transition: 0.3s ease all;
+    z-index: 1;
+    background-color: white;
+  }
+  
+  .card__container button:before {
+    transition: 0.5s all ease;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    right: 50%;
+    bottom: 0;
+    opacity: 0;
+    content: '';
+    background-color: #FF0072;
+    z-index: -1;
+  }
+  
+  .card__container button:hover, button:focus {
+    color: white;
+  }
+  
+  .card__container button:hover:before, button:focus:before {
+    transition: 0.5s all ease;
+    left: 0;
+    right: 0;
+    opacity: 1;
+  }
+  
+  .card__container button:active {
+    transform: scale(0.9);
+  }
+
+
+ /* Footer */
+
+.footer{
+    background: var(--primary-color);
+    color: var(--secondary-color);
+    padding: 4rem 2rem;
+}
+
+.footer__social--link{
+    color: var(--secondary-color);
+}
+
+.footer__container{
+   display: grid;
+   grid-template-columns: repeat(2, 1fr);
+   justify-content: space-between;
+   align-items: center;
+   gap: 6rem;
+   margin-left: 4rem;
+}
+
+.footer__title {
+    font-size: 1.5rem;
+    font-family: 'Playfair display', sans-serif;
+    margin-bottom: 0.5rem;
+    color: #bcccda;
+}
+
+.footer__description {
+    font-family: 'Lato', sans-serif;
+}
+
+.footer__social {
+    display: flex;
+    justify-content: center; 
+    align-items: end;
+    gap: 2.5rem;
+}
+
+span {
+    background: linear-gradient(to right, #ef5350, #f48fb1, #7e57c2, #2196f3, #26c6da, #43a047, #eeff41, #f9a825, #ff5722);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+
+i{
+    font-size: 2.8rem;
 }
 
 /* Media Queries */
@@ -59,9 +339,23 @@ img{
 }
 
 @media(max-width: 768px){
-    
+    .hero{
+        height: auto;
+    }
+
+    /* .footer__container{
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 3rem;
+        max-width: 600px;
+        margin-left: 0;
+    }*/
 }
 
 @media(max-width: 576px){
     
 }
+
+
+
+
