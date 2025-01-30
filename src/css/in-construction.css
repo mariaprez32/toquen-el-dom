@@ -4,6 +4,9 @@
     --tertiary-color: #F5F5F5;
     --quaternary-color: #387184;
     --quinary-color:#FF0072;
+    --saxophone-color: #B5A642;
+    --guitar-color: #D2B48C;
+    --drums-color: #4682B4;
     --title-font: 'Playfair display', sans-serif;
     --main-font: 'Lato', sans-serif;
 }   
@@ -76,24 +79,68 @@ section{
     background-repeat: no-repeat;
     background-size: contain;
 }
-.secton__div1 {
+.section__Text {
     grid-column: 1; 
     grid-row: 1;
     align-items: center;
 }
-.sectonSaxophone__div2 {
+.section__text__button-container {
+    display: flex;
+    justify-content: center;
+}
+.section__saxophoneButton{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-color: var(--saxophone-color);
+}
+.section__saxophoneButton::before{
+    background-color: var(--saxophone-color);
+}  
+.section__saxophone {
     grid-column: 2; 
     grid-row: 1;
+    width: 100%;
+    height: 75vh;
+    background-color: var(--tertiary-color);
+    background-image: url("/public/images/ic-saxophone.webp");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+} 
+.section__guitarButton{
+    border-color: var(--guitar-color);
 }
-.sectionSaxophone {
-    background-image: url("saxophone image");
-
+.section__guitarButton::before{
+    background-color: var(--guitar-color);
+}  
+.section__guitar {
+    grid-column: 2; 
+    grid-row: 1;
+    width: 100%;
+    height: 75vh;
+    background-color: var(--tertiary-color);
+    background-image: url("/public/images/ic-guitar.webp");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
-.sectionGuitar {
-    background-image: url("guitar image");
+.section__drumsButton{
+    border-color: var(--drums-color);
 }
-.sectionDrums {
-    background-image: url("drums image");
+.section__drumsButton::before{
+    background-color: var(--drums-color);
+}  
+.section__drums {
+    grid-column: 2; 
+    grid-row: 1;
+    width: 100%;
+    height: 75vh;
+    background-color: var(--tertiary-color);
+    background-image: url("/public/images/ic-drums.webp");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 h3 {
     font-family: var(--title-font);
