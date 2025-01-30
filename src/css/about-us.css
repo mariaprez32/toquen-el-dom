@@ -13,6 +13,11 @@
   background-color: #f5f5f5;
   position: fixed;
   z-index: 1000;
+  border-bottom: solid 1px  grey;
+}
+
+.navbar__menu--item {
+  list-style-type: none;
 }
 
 .navbar__container{
@@ -52,25 +57,34 @@
 }
 
 h1{
-  display: flex;
-  justify-content: center; 
   font-family:'Playfair display', sans-serif;
+  text-align: center;
+  padding-top: 15vh;
 }
 
-.main{
-  display: flex;
-  align-items: center;
+.cardscontainer {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 columnas en pantallas grandes */
+  gap: 2rem;
   justify-content: center;
-  background: rgb(255, 255, 255);
+  padding: 2rem;
+  margin-left: 11vh;
+  margin-right: -10vh;
+
 }
 
+
+.container3{
+  width: 100vw;
+}
 
 
 .card{
   position: relative;
   width: 30vh;
   height: 50vh;
-  margin: 70px;
+  margin-top: 2vh;
+ /* margin-right: 10vh;*/
   flex-shrink: 0; 
   display: flex;
   flex-direction: column;
@@ -205,7 +219,8 @@ h1{
 }
 span {
   background: linear-gradient(to right, #ef5350, #f48fb1, #7e57c2, #2196f3, #26c6da, #43a047, #eeff41, #f9a825, #ff5722);
--webkit-background-clip: text;
+-webkit-background-clip: text; 
+background-clip: text;
 -webkit-text-fill-color: transparent; 
 font-family: 'Playfair display', sans-serif;
 }
@@ -218,22 +233,26 @@ a{
   text-decoration: none;
   color: var(--secondary-color);
 }
-  
-/*MEDIA QUERIES*/
-/*Pantallas medianas (tablets, entre 768px y 1024px)*/
-@media (min-width: 768px) and (max-width: 1024px) {
-  .card {
-    flex-basis: calc(50% - 10px);  
-    height: auto; 
-    margin: 20px; 
+
+
+/* Para tablets (2 cards por fila) */
+@media (max-width: 1024px) {
+  .cardscontainer {
+    grid-template-columns: repeat(2, 1fr); /* 2 columnas */
   }
 }
 
-/* En pantallas más pequeñas (móviles, por debajo de 768px) */
+/* Para móviles (1 card por fila) */
 @media (max-width: 768px) {
-  .card {
-    flex-basis: 100%;  
-    height: auto; 
-    margin: 10px 0;
+  .cardscontainer {
+    grid-template-columns: 1fr; /* 1 columna */
+  }
+  .footer__container{
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, 1fr);
+    gap: 2rem;
+  }
+  .footer__social {
+    justify-content: center; 
   }
 }
