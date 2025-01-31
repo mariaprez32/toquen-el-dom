@@ -7,6 +7,9 @@
 :root{
     --primary-color: black;
     --secondary-color: white;
+    --tertiary-color: #F5F5F5;
+    --quaternary-color: #387184;
+    --quinary-color:#FF0072;
 }
 
 body{
@@ -32,7 +35,7 @@ img{
 .navbar{
     padding: 1rem 2rem;
     width: 100%;
-    background-color: #F5F5F5;
+    background-color: var(--tertiary-color);
     position: fixed;
     z-index: 1000;
 }
@@ -70,7 +73,7 @@ img{
 }
 
 .navbar__menu--link:hover{
-    color:#387184;
+    color: var(--quaternary-color);
 }
 
 /* Estilos base del botón hamburguesa */
@@ -223,7 +226,7 @@ img{
     gap: 50px;
 }
 
-.instrument__piano, .instrument__guitarra, .instrument__bateria, .instrument__saxofon {
+.instrument, .instrument__guitarra, .instrument__bateria, .instrument__saxofon {
     /* background-color: black; */
     margin: 20px 0;
     padding: 20px 20px 30px;
@@ -231,14 +234,14 @@ img{
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 } 
 
-.instrument__piano h2, .instrument__guitarra h2, .instrument__bateria h2, .instrument__saxofon h2{
+.instrument h2, .instrument__guitarra h2, .instrument__bateria h2, .instrument__saxofon h2{
     font-size: 2rem;
     font-weight: bold;
     color: var(--primary-color);
     margin-bottom: 20px;
 }
 
-.instrument__piano p, .instrument__guitarra p, .instrument__bateria p, .instrument__saxofon p{
+.instrument p, .instrument__guitarra p, .instrument__bateria p, .instrument__saxofon p{
     font-size: 1.1rem;
     color: var(--primary-color);
     margin-bottom: 30px;
@@ -257,14 +260,14 @@ img{
     color: rgb(53, 51, 51);
 }
 
-.instrument__piano{
+.instrument{
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 20px;
 }
 
-.instrument__piano img{
+.instrument img{
     width: 190px;
     height: 220px;
     object-fit: cover;
@@ -282,7 +285,7 @@ img{
     text-align: center;
     font-weight: bold;
     padding: 0.7em 2em;
-    border: 3px solid #FF0072;
+    border: 3px solid var(--quinary-color);
     border-radius: 2px;
     position: relative;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.1);
@@ -290,7 +293,7 @@ img{
     text-decoration: none;
     transition: 0.3s ease all;
     z-index: 1;
-    background-color: white;
+    background-color: var(--secondary-color-color);
   }
   
   .card__container button:before {
@@ -302,12 +305,12 @@ img{
     bottom: 0;
     opacity: 0;
     content: '';
-    background-color: #FF0072;
+    background-color: var(--quinary-color);
     z-index: -1;
   }
   
   .card__container button:hover, button:focus {
-    color: white;
+    color: var(--secondary-color);
   }
   
   .card__container button:hover:before, button:focus:before {
@@ -319,6 +322,10 @@ img{
   
   .card__container button:active {
     transform: scale(0.9);
+  }
+
+  p{
+    text-align: justify;
   }
 
 
@@ -410,7 +417,7 @@ a{
         top: 70px;
         left: 0;
         width: 100%;
-        background-color: #F5F5F5;
+        background-color: var(--tertiary-color);
         padding: 20px 0;
         box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     }
@@ -475,7 +482,7 @@ a{
         padding: 15px;
     }
 
-    .instrument__piano {
+    .instrument {
         padding: 15px;
     }
 
@@ -530,22 +537,26 @@ a{
         font-size: 1rem;
     }
 
+    .hero__image{
+        display: none;
+    }
+
     /* Instruments */
-    .instrument__piano {
+    .instrument {
         flex-direction: column;
         text-align: center;
     }
 
-    .instrument__piano img {
+    .instrument img {
         width: 160px;
         height: 190px;
     }
 
-    .instrument__piano h2 {
+    .instrument h2 {
         font-size: 1.8rem;
     }
 
-    .instrument__piano p {
+    .instrument p {
         font-size: 1rem;
     }
 
