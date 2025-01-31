@@ -26,9 +26,14 @@
     <nav class="navbar">
       <div class="navbar__container">
           <div class="navbar__logo">
-              <img src="../public/images/logo.png" alt="Logo Toquen el DOM">
+              <img src="./public/images/logo.png" alt="">
           </div>
-          <div class="navbar__menu">
+          <button class="navbar__hamburger" id="hamburger-btn">
+              <span class="span"></span>
+              <span class="span"></span>
+              <span class="span"></span>
+          </button>
+          <div class="navbar__menu" id="nav-menu">
               <ul class="navbar__menu--list">
                   <li class="navbar__menu--item">
                       <a href="home" class="navbar__menu--link">Home</a>
@@ -37,8 +42,7 @@
                       <a href="instrumento" class="navbar__menu--link">Instrumento</a>
                   </li>
                   <li class="navbar__menu--item">
-                      <a href="aboutUs" class="navbar__menu--link">About us</a>
-                  </li>
+                      <a href="abautUs" class="navbar__menu--link">About us</a>
                   </li>
                   <li class="navbar__menu--item">
                       <a href="contact" class="navbar__menu--link">Contacto</a>
