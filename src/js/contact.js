@@ -29,22 +29,28 @@ document.getElementById("enviar").addEventListener("click", function () {
 
     errorBox.style.display = "none"; // Ocultar mensaje al iniciar
     errorBox.innerHTML = ""; // Limpiar mensaje anterior
+    
     let errores = [];
 
     // Validar los campos
          if (nombre === "") {
-            errores.push("El nombre es obligatorio.");
+            errores.push("Debes de poner un nombre de contacto.");
             document.getElementById("nombre").style.borderColor = "#FF0072";
+         }else{
+            document.getElementById("nombre").style.borderColor = "#ccc";
          }
          if (!esValidoCorreo(correo)) {
-            
-            errores.push("Introduce un correo válido. xxxx@xxxxxx.xxx");
-            
+            errores.push("Introduce un correo válido. xxxxxx@xxxxxx.xxx");
             document.getElementById("correo").style.borderColor = "#FF0072";
+         }else{
+            document.getElementById("correo").style.borderColor = "#ccc";
          }
+
          if (mensaje === "") {
-                errores.push("Te as olvidadio de escribir el mensaje.");
+                errores.push("Te as olvidado de escribir el mensaje.");
                 document.getElementById("mensaje").style.borderColor = "#FF0072";
+         }else{
+            document.getElementById("mensaje").style.borderColor = "#ccc";
          }
          if(errores.length>0) {
             errorBox.innerHTML = errores.join("<br>");
@@ -59,7 +65,6 @@ document.getElementById("enviar").addEventListener("click", function () {
             document.getElementById("mensaje").style.borderColor = "#ccc";
     
             setTimeout(function() {
-              
                 document.getElementById("mensajeExito").style.display = "none";
             }, 3000); // 3000 milisegundos = 3 segundos
          }
