@@ -74,6 +74,7 @@ img{
 }
 
 /* Estilos base del botón hamburguesa */
+
 .navbar__hamburger {
     display: none; /* Se mostrará en mobile */
     width: 30px;
@@ -86,7 +87,6 @@ img{
     z-index: 10;
 }
 
-/* Estilos de las líneas del hamburguesa */
 .navbar__hamburger span {
     position: absolute;
     width: 100%;
@@ -96,7 +96,7 @@ img{
     transition: all 0.3s ease;
 }
 
-/* Posicionamiento de cada línea */
+
 .navbar__hamburger span:nth-child(1) {
     top: 0;
 }
