@@ -16,7 +16,6 @@ body{
     width: 100vw;
     display: flex;
     flex-direction: column;
-    
 }
 
 
@@ -74,6 +73,45 @@ img{
     color:#387184;
 }
 
+/* Estilos base del botón hamburguesa */
+.navbar__hamburger {
+    display: none; /* Se mostrará en mobile */
+    width: 30px;
+    height: 24px;
+    position: relative;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    z-index: 10;
+}
+
+/* Estilos de las líneas del hamburguesa */
+.navbar__hamburger span {
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background-color: #000; /* Color negro para las líneas */
+    left: 0;
+    transition: all 0.3s ease;
+}
+
+/* Posicionamiento de cada línea */
+.navbar__hamburger span:nth-child(1) {
+    top: 0;
+}
+
+.navbar__hamburger span:nth-child(2) {
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.navbar__hamburger span:nth-child(3) {
+    bottom: 0;
+}
+
+
+
 /* Hero */
 
 .hero{
@@ -81,7 +119,7 @@ img{
      no-repeat center / cover;
     height: 1000px;
     width: 100vw;
-    padding: 11.5rem 2rem 8rem;
+    /* padding: 11.5rem 2rem 8rem; */
     color: var(--secondary-color);
     overflow-x: hidden;
     position: relative;
@@ -302,7 +340,6 @@ img{
    justify-content: space-between;
    align-items: center;
    gap: 6rem;
-   /* margin-left: 4rem; */
 }
 
 .footer__title {
@@ -319,15 +356,13 @@ img{
 .footer__social {
     display: flex;
     justify-content: end; 
-    /* gap: 2.5rem; */
-    /* margin-right: 3rem; */
 }
 
 .footer__social--insta, .footer__social--x{
     margin-right: 2.7rem;
 
 }
-span {
+.footer__title span {
     background: linear-gradient(to right, #ef5350, #f48fb1, #7e57c2, #2196f3, #26c6da, #43a047, #eeff41, #f9a825, #ff5722);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -346,32 +381,202 @@ a{
 
 /* Media Queries */
 
-@media(max-width: 1200px){
-    .hero{
-        height: auto;
-    }
-}
 
-@media(max-width: 768px){
-    .hero{
-        height: auto;
+/* Tablet Styles */
+@media screen and (max-width: 992px) {
+    
+    .navbar__hamburger {
+        display: block;
     }
 
-    /* .footer__container{
-        grid-template-columns: 1fr;
+    /* Animación cuando está activo */
+    .navbar__hamburger.active span:nth-child(1) {
+        transform: rotate(45deg);
+        top: 50%;
+    }
+
+    .navbar__hamburger.active span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .navbar__hamburger.active span:nth-child(3) {
+        transform: rotate(-45deg);
+        top: 50%;
+    }
+
+    .navbar__menu {
+        display: none;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background-color: #F5F5F5;
+        padding: 20px 0;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .navbar__menu.active {
+        display: block;
+    }
+
+    .navbar__menu--list {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .navbar__menu--item {
         text-align: center;
-        gap: 3rem;
-        max-width: 600px;
-        margin-left: 0;
-    }*/
-}
+    }
 
-@media(max-width: 576px){
-    .hero{
+    /* Animaciones del botón */
+    .navbar__hamburger.active span:first-child {
+        transform: rotate(45deg) translate(5px, 5px);
+    }
+
+    .navbar__hamburger.active span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .navbar__hamburger.active span:last-child {
+        transform: rotate(-45deg) translate(5px, -5px);
+    }
+
+    /* Hero */
+    .hero {
         height: auto;
+        padding: 8rem 1rem 4rem;
+    }
+
+    .hero__container {
+        padding-left: 2rem;
+        gap: 2rem;
+    }
+
+    .hero__title1 {
+        font-size: 1.4rem;
+    }
+
+    .hero__title2 {
+        font-size: 3rem;
+    }
+
+    .hero__description {
+        font-size: 1.1rem;
+    }
+
+    /* Instruments */
+    .instrument__container {
+        margin: 60px auto;
+    }
+
+    .container1 {
+        flex-direction: column;
+        gap: 30px;
+        padding: 15px;
+    }
+
+    .instrument__piano {
+        padding: 15px;
+    }
+
+    .card {
+        width: 100%;
+    }
+
+    /* Footer */
+    .footer {
+        padding: 2rem 3rem;
+    }
+
+    .footer__container {
+        gap: 3rem;
+    }
+
+    .footer__social {
+        justify-content: center;
     }
 }
 
+/* Mobile Styles */
+@media screen and (max-width: 576px) {
 
+
+    /* Hero */
+    .hero {
+        padding: 6rem 1rem 3rem;
+    }
+
+    .hero__container {
+        padding: auto;
+        text-align: center;
+        gap: 0;
+    }
+
+    .hero__title1 {
+        font-size: 1.2rem;
+    }
+
+    .hero__title2 {
+        font-size: 2.5rem;
+    }
+
+    .hero__description {
+        font-size: 1rem;
+        text-align: center;
+    }
+
+    .hero__button button {
+        padding: 12px 30px;
+        font-size: 1rem;
+    }
+
+    /* Instruments */
+    .instrument__piano {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .instrument__piano img {
+        width: 160px;
+        height: 190px;
+    }
+
+    .instrument__piano h2 {
+        font-size: 1.8rem;
+    }
+
+    .instrument__piano p {
+        font-size: 1rem;
+    }
+
+    .card__container button {
+        font-size: 16px;
+        padding: 0.6em 1.8em;
+    }
+
+    /* Footer */
+    .footer {
+        padding: 2rem 1.5rem;
+    }
+
+    .footer__container {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        text-align: center;
+    }
+
+    .footer__social {
+        justify-content: center;
+    }
+
+    .footer__social--insta,
+    .footer__social--x {
+        margin-right: 2rem;
+    }
+
+    i {
+        font-size: 2.2rem;
+    }
+}
 
 

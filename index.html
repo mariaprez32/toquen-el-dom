@@ -23,11 +23,13 @@
         href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
         rel="stylesheet">
 
+    <link rel="icon" type="image/icon" href="../public/images/logo_Icon.ico">
+
 </head>
 
 <body>
-    <script src="./src/js/script.js"></script>
-    <nav class="navbar">
+
+    <!-- <nav class="navbar">
         <div class="navbar__container">
             <div class="navbar__logo">
                 <img src="./public/images/logo.png" alt="">
@@ -51,7 +53,37 @@
             </div>
         </div>
 
+    </nav> -->
+
+    <nav class="navbar">
+        <div class="navbar__container">
+            <div class="navbar__logo">
+                <img src="./public/images/logo.png" alt="">
+            </div>
+            <button class="navbar__hamburger" id="hamburger-btn">
+                <span class="span"></span>
+                <span class="span"></span>
+                <span class="span"></span>
+            </button>
+            <div class="navbar__menu" id="nav-menu">
+                <ul class="navbar__menu--list">
+                    <li class="navbar__menu--item">
+                        <a href="home" class="navbar__menu--link">Home</a>
+                    </li>
+                    <li class="navbar__menu--item">
+                        <a href="instrumento" class="navbar__menu--link">Instrumento</a>
+                    </li>
+                    <li class="navbar__menu--item">
+                        <a href="abautUs" class="navbar__menu--link">About us</a>
+                    </li>
+                    <li class="navbar__menu--item">
+                        <a href="contact" class="navbar__menu--link">Contacto</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
     </nav>
+
 
     <!-- hero -->
 
@@ -119,7 +151,7 @@
 
                 <div class="instrument__piano">
                     <figure>
-                        <img src="./public/images/bateria.png" alt="">
+                        <img src="./public/images/bateria copia.png" alt="">
                     </figure>
                     <div class="card__container">
                         <h2>Batería</h2>
@@ -159,9 +191,8 @@
                 <div class="footer__about">
                     <h4 class="footer__title"><span>Toquen el DOM</span></h4>
                     <p class="footer__description">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet, nemo. Veniam cupiditate
-                        provident
-                        odit alias porro quae eos officia minima.
+                        Donde la pasión por el arte sonoro se une con métodos innovadores de enseñanza. Formamos músicos
+                        con excelencia técnica y creatividad sin límites.
                     </p>
                 </div>
 
@@ -179,6 +210,9 @@
                 </div>
             </div>
         </footer>
+
+        <script src="./src/js/instrument.js"></script>
+
 
 </body>
 
