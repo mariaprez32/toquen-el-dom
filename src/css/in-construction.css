@@ -18,12 +18,50 @@ body {
     display: flex;
     flex-direction: column;
 }
+
+/* NAV */
+
 .navbar{
     padding: 1rem 2rem;
     background-color: var(--secondary-color);
     z-index: 1000;
     height: 5vh;
     border-bottom: solid 1px  var(--tertiary-color);
+}
+
+.navbar__hamburger {
+    display: none;
+    width: 30px;
+    height: 24px;
+    position: relative;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    z-index: 10;
+}
+
+.navbar__hamburger span {
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background-color: #000; /* Color negro para las líneas */
+    left: 0;
+    transition: all 0.3s ease;
+}
+
+
+.navbar__hamburger span:nth-child(1) {
+    top: 0;
+}
+
+.navbar__hamburger span:nth-child(2) {
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.navbar__hamburger span:nth-child(3) {
+    bottom: 0;
 }
 
 .navbar__container{
@@ -66,6 +104,8 @@ body {
     list-style-type: none;
 }
 
+/* SECTION */
+
 section{
     height: 75vh;
     width: 100%;
@@ -88,60 +128,6 @@ section{
     display: flex;
     justify-content: center;
 }
-.section__saxophoneButton{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-color: var(--saxophone-color);
-}
-.section__saxophoneButton::before{
-    background-color: var(--saxophone-color);
-}  
-.section__saxophone {
-    grid-column: 2; 
-    grid-row: 1;
-    width: 100%;
-    height: 75vh;
-    background-color: var(--secondary-color);
-    background-image: url("/public/images/ic-saxophone.webp");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-} 
-.section__guitarButton{
-    border-color: var(--guitar-color);
-}
-.section__guitarButton::before{
-    background-color: var(--guitar-color);
-}  
-.section__guitar {
-    grid-column: 2; 
-    grid-row: 1;
-    width: 100%;
-    height: 75vh;
-    background-color: var(--secondary-color);
-    background-image: url("/public/images/ic-guitar.webp");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-}
-.section__drumsButton{
-    border-color: var(--drums-color);
-}
-.section__drumsButton::before{
-    background-color: var(--drums-color);
-}  
-.section__drums {
-    grid-column: 2; 
-    grid-row: 1;
-    width: 100%;
-    height: 75vh;
-    background-color: var(---color);
-    background-image: url("/public/images/ic-drums.webp");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-}
 h3 {
     font-family: var(--title-font);
     font-size: xx-large;
@@ -154,7 +140,9 @@ p {
     font-size: medium;
 }
 
-button {
+/* COMON BUTTON */
+
+.section__text__button-container button {
     font-size: 18px;
     letter-spacing: 2px;
     text-transform: uppercase;
@@ -176,7 +164,7 @@ button {
     cursor: pointer;
   }
   
-button:before {
+  .section__text__button-container button:before {
     transition: 0.5s all ease;
     position: absolute;
     top: 0;
@@ -189,20 +177,85 @@ button:before {
     z-index: -1;
   }
   
-button:hover, button:focus {
+  .section__text__button-container button:hover, .section__text__button-container button:focus {
     color: var(--secondary-color);
   }
  
-button:hover:before, button:focus:before {
+  .section__text__button-container button:hover:before, .section__text__button-container button:focus:before {
     transition: 0.5s all ease;
     left: 0;
     right: 0;
     opacity: 1;
   }
 
-button:active {
+  .section__text__button-container button:active {
     transform: scale(0.9);
   }
+
+  /* SAXOPHONE SPECIFIC */
+
+  .section .section__saxophoneButton{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-color: var(--saxophone-color);
+}
+.section .section__saxophoneButton::before{
+    background-color: var(--saxophone-color);
+}  
+.section__saxophone {
+    grid-column: 2; 
+    grid-row: 1;
+    width: 100%;
+    height: 75vh;
+    background-color: var(--secondary-color);
+    background-image: url("/public/images/ic-saxophone.webp");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+} 
+
+/* GUITAR SPECIFIC */
+
+.section .section__guitarButton{
+    border-color: var(--guitar-color);
+}
+.section .section__guitarButton::before{
+    background-color: var(--guitar-color);
+}  
+.section__guitar {
+    grid-column: 2; 
+    grid-row: 1;
+    width: 100%;
+    height: 75vh;
+    background-color: var(--secondary-color);
+    background-image: url("/public/images/ic-guitar.webp");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* DRUMS SPECIFIC */
+
+.section .section__drumsButton{
+    border-color: var(--drums-color);
+}
+.section .section__drumsButton::before{
+    background-color: var(--drums-color);
+}  
+.section__drums {
+    grid-column: 2; 
+    grid-row: 1;
+    width: 100%;
+    height: 75vh;
+    background-color: var(---color);
+    background-image: url("/public/images/ic-drums.webp");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* FOOTER */
 
 .footer{
     background: var(--primary-color);
@@ -240,7 +293,7 @@ button:active {
     margin-right: 2.7rem;
 
 }
-span {
+.footer__title span {
     background: linear-gradient(to right, #ef5350, #f48fb1, #7e57c2, #2196f3, #26c6da, #43a047, #eeff41, #f9a825, #ff5722);
     background-clip: text;
     -webkit-background-clip: text;
@@ -257,6 +310,48 @@ a{
 @media (max-width: 1000px) {
     body {
         overflow-x: hidden; 
+    }
+
+    .navbar__hamburger {
+        display: block;
+    }
+
+    .navbar__hamburger.active span:nth-child(1) {
+        transform: rotate(45deg);
+        top: 50%;
+    }
+
+    .navbar__hamburger.active span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .navbar__hamburger.active span:nth-child(3) {
+        transform: rotate(-45deg);
+        top: 50%;
+    }
+
+    .navbar__menu {
+        display: none;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background-color: #F5F5F5;
+        padding: 20px 0;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .navbar__menu.active {
+        display: block;
+    }
+
+    .navbar__menu--list {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .navbar__menu--item {
+        text-align: center;
     }
 
     .section__Text {
