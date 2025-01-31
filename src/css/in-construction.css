@@ -1,0 +1,410 @@
+:root {
+  --primary-color: black;
+  --secondary-color: #f5f5f5;
+  --tertiary-color: grey;
+  --quaternary-color: #387184;
+  --quinary-color: #ff0072;
+  --saxophone-color: #b5a642;
+  --guitar-color: #d2b48c;
+  --drums-color: #4682b4;
+  --title-font: "Playfair display", sans-serif;
+  --main-font: "Lato", sans-serif;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+/* NAV */
+
+.navbar {
+  padding: 1rem 2rem;
+  background-color: var(--secondary-color);
+  z-index: 1000;
+  height: 5vh;
+  border-bottom: solid 1px var(--tertiary-color);
+}
+
+.navbar__hamburger {
+  display: none;
+  width: 30px;
+  height: 24px;
+  position: relative;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  z-index: 10;
+}
+
+.navbar__hamburger span {
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  background-color: var(--primary-color); /* Color negro para las líneas */
+  left: 0;
+  transition: all 0.3s ease;
+}
+
+.navbar__hamburger span:nth-child(1) {
+  top: 0;
+}
+
+.navbar__hamburger span:nth-child(2) {
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.navbar__hamburger span:nth-child(3) {
+  bottom: 0;
+}
+
+.navbar__container {
+  width: 100%;
+  height: 3rem;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar__logo img {
+  width: 80px;
+  height: 60px;
+}
+
+.navbar__menu--list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  font-weight: 500;
+}
+
+.navbar__menu--link {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 1.1rem;
+  font-weight: lighter;
+  color: var(--primary-color);
+  font-family: var(--title-font);
+}
+
+.navbar__menu--link:hover {
+  color: var(--quaternary-color);
+}
+
+.navbar__menu--item {
+  list-style-type: none;
+}
+
+/* SECTION */
+
+section {
+  height: 75vh;
+  width: 100%;
+  height: 75vh;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  justify-content: center;
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.section__Text {
+  grid-column: 1;
+  grid-row: 1;
+  align-items: center;
+}
+.section__text__button-container {
+  display: flex;
+  justify-content: center;
+}
+h3 {
+  font-family: var(--title-font);
+  font-size: xx-large;
+  text-align: center;
+}
+p {
+  font-family: var(--main-font);
+  text-align: center;
+  margin-top: 2vh;
+  font-size: medium;
+}
+
+/* COMON BUTTON */
+
+.section__text__button-container button {
+  font-size: 18px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  display: inline-block;
+  text-align: center;
+  font-family: var(--main-font);
+  font-weight: bold;
+  padding: 0.7em 2em;
+  margin-top: 4vh;
+  border: 3px solid var(--quinary-color);
+  border-radius: 2px;
+  position: relative;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.1);
+  color: var(--primary-color);
+  text-decoration: none;
+  transition: 0.3s ease all;
+  z-index: 1;
+  background-color: var(--secondary-color);
+  cursor: pointer;
+}
+
+.section__text__button-container button:before {
+  transition: 0.5s all ease;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  right: 50%;
+  bottom: 0;
+  opacity: 0;
+  content: "";
+  background-color: var(--quinary-color);
+  z-index: -1;
+}
+
+.section__text__button-container button:hover,
+.section__text__button-container button:focus {
+  color: var(--secondary-color);
+}
+
+.section__text__button-container button:hover:before,
+.section__text__button-container button:focus:before {
+  transition: 0.5s all ease;
+  left: 0;
+  right: 0;
+  opacity: 1;
+}
+
+.section__text__button-container button:active {
+  transform: scale(0.9);
+}
+
+/* SAXOPHONE SPECIFIC */
+
+.section .section__saxophoneButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-color: var(--saxophone-color);
+}
+.section .section__saxophoneButton::before {
+  background-color: var(--saxophone-color);
+}
+.section__saxophone {
+  grid-column: 2;
+  grid-row: 1;
+  width: 100%;
+  height: 75vh;
+  background-color: var(--secondary-color);
+  background-image: url("/public/images/ic-saxophone.webp");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* GUITAR SPECIFIC */
+
+.section .section__guitarButton {
+  border-color: var(--guitar-color);
+}
+.section .section__guitarButton::before {
+  background-color: var(--guitar-color);
+}
+.section__guitar {
+  grid-column: 2;
+  grid-row: 1;
+  width: 100%;
+  height: 75vh;
+  background-color: var(--secondary-color);
+  background-image: url("/public/images/ic-guitar.webp");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* DRUMS SPECIFIC */
+
+.section .section__drumsButton {
+  border-color: var(--drums-color);
+}
+.section .section__drumsButton::before {
+  background-color: var(--drums-color);
+}
+.section__drums {
+  grid-column: 2;
+  grid-row: 1;
+  width: 100%;
+  height: 75vh;
+  background-color: var(--secondary-color);
+  background-image: url("/public/images/ic-drums.webp");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* FOOTER */
+
+.footer {
+  background: var(--primary-color);
+  color: var(--secondary-color);
+  padding: 2rem 6rem;
+}
+
+.footer__social--link {
+  color: var(--secondary-color);
+}
+
+.footer__container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-content: space-between;
+  align-items: center;
+  gap: 6rem;
+}
+
+.footer__title {
+  font-size: 1.5rem;
+  font-family: var(--title-font);
+  margin-bottom: 0.5rem;
+  color: var(--secondary-color);
+}
+.footer__description {
+  font-family: var(--main-font);
+  text-align: justify;
+}
+.footer__social {
+  display: flex;
+  justify-content: end;
+}
+.footer__social--insta,
+.footer__social--x {
+  margin-right: 2.7rem;
+}
+.footer__title span {
+  background: linear-gradient(
+    to right,
+    #ef5350,
+    #f48fb1,
+    #7e57c2,
+    #2196f3,
+    #26c6da,
+    #43a047,
+    #eeff41,
+    #f9a825,
+    #ff5722
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+i {
+  font-size: 2.8rem;
+}
+a {
+  text-decoration: none;
+  color: var(--secondary-color);
+}
+
+@media (max-width: 1000px) {
+  body {
+    overflow-x: hidden;
+  }
+
+  .navbar__hamburger {
+    display: block;
+  }
+
+  .navbar__hamburger.active span:nth-child(1) {
+    transform: rotate(45deg);
+    top: 50%;
+  }
+
+  .navbar__hamburger.active span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .navbar__hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg);
+    top: 50%;
+  }
+
+  .navbar__menu {
+    display: none;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    background-color: var(--secondary-color);
+    padding: 20px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+
+  .navbar__menu.active {
+    display: block;
+  }
+
+  .navbar__menu--list {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .navbar__menu--item {
+    text-align: center;
+  }
+
+  .section__Text {
+    grid-column: 1;
+    grid-row: 1;
+    margin-top: 5vh;
+  }
+
+  .section__saxophone,
+  .section__drums,
+  .section__guitar {
+    grid-column: 1;
+    grid-row: 2;
+    width: 100vw;
+    height: 74.9vh;
+    margin-top: 5vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  .footer {
+    padding: 2rem 1.5rem;
+    margin-top: 28vh;
+  }
+
+  .footer__container {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    text-align: center;
+  }
+
+  .footer__social {
+    justify-content: center;
+  }
+
+  .footer__social--insta,
+  .footer__social--x {
+    margin-right: 2rem;
+  }
+
+  i {
+    font-size: 2.2rem;
+  }
+}
