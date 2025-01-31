@@ -248,7 +248,7 @@ p {
     grid-row: 1;
     width: 100%;
     height: 75vh;
-    background-color: var(---color);
+    background-color: var(--secondary-color);
     background-image: url("/public/images/ic-drums.webp");
     background-size: cover;
     background-position: center;
