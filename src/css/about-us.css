@@ -4,10 +4,9 @@
   box-sizing: border-box;
   font-family: sans-serif;
  
-  
 }
  
-/* Navbar */
+/* Navbar c*/
 
 .navbar{
   padding: 1rem 2rem;
@@ -352,4 +351,4 @@ a{
 i {
   font-size: 2.2rem;
 }
-}
+
