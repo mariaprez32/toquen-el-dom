@@ -64,66 +64,75 @@ function keyPressBlack(key) {
 key1.addEventListener("click", () => {
   // new Audio('../public/keys//key01.mp3').play();
   new Audio("../public/keys//261-C.mp3").play();
+  console.log("C")
   keyPressWhite(key1);
 });
 // ************************************************
 key2.addEventListener("click", () => {
-  new Audio("keys/277-C-sharp").play();
+  new Audio("../public/keys//277-C-sharp.mp3").play();
+  console.log("C-sharp");
   keyPressBlack(black1);
 });
 // D
 key3.addEventListener("click", () => {
   new Audio("../public/keys//293-D.mp3").play();
-  console.log("key-1");
+  console.log("D");
   keyPressWhite(key3);
 });
 
 key4.addEventListener("click", () => {
   new Audio("../public/keys//311-D-sharp.mp3").play();
+  console.log("D sharp");
   keyPressBlack(black2);
 });
 /////////////////////////////////////////////////////////////////
 // E
 key5.addEventListener("click", () => {
   new Audio("../public/keys//329-E.mp3").play();
-  console.log("key-1");
+  console.log("E");
   keyPressWhite(key5);
 });
 
 // F
 key6.addEventListener("click", () => {
   new Audio("../public/keys//349-F.mp3").play();
-  console.log("key-1");
+  console.log("F");
   keyPressWhite(key6);
 });
 
 key7.addEventListener("click", () => {
   new Audio("../public/keys//369F-sharp.mp3").play();
+  console.log("F sharp");
   keyPressBlack(black3);
 });
 // //////////////////////////////////////////////////////
 // G
 key8.addEventListener("click", () => {
   new Audio("../public/keys//391-G.mp3").play();
+  console.log("G");
   keyPressWhite(key8);
 });
 key9.addEventListener("click", () => {
   new Audio("../public/keys//415-G-sharp.mp3").play();
+  console.log("G sharp");
   keyPressBlack(black4);
 });
 
 // A
 key10.addEventListener("click", () => {
   new Audio("../public/keys//440-A.mp3").play();
+  console.log("A");
   keyPressWhite(key10);
 });
 key11.addEventListener("click", () => {
   new Audio("../public/keys//466-A-sharp.mp3").play();
+  console.log("A sharp");
   keyPressBlack(black5);
 });
 // B
 key12.addEventListener("click", () => {
   new Audio("../public/keys//495-B.mp3").play();
+  console.log("B");
   keyPressWhite(key12);
 });
 
@@ -131,66 +140,79 @@ key12.addEventListener("click", () => {
 // C
 key13.addEventListener("click", () => {
   new Audio("../public/keys//HIGHER-OCTAVE/523-C.mp3").play();
+  console.log("Octava alta C");
   keyPressWhite(key13);
 });
 key14.addEventListener("click", () => {
   new Audio("../public/keys//HIGHER-OCTAVE/545-C-sharp.mp3").play();
+  console.log("Octava alta C sharp");
   keyPressBlack(black6);
 });
 
 // D
 key15.addEventListener("click", () => {
   new Audio("../public/keys//HIGHER-OCTAVE/587-D.mp3").play();
+  console.log("Octava alta D");
   keyPressWhite(key15);
 });
 key16.addEventListener("click", () => {
   new Audio("../public/keys//HIGHER-OCTAVE/622-D-sharp.mp3").play();
+  console.log("Octava alta D sharp");
   keyPressBlack(black7);
 });
 
 // E
 key17.addEventListener("click", () => {
   new Audio("../public/keys//HIGHER-OCTAVE/659-E.mp3").play();
+  console.log("Octava alta E");
   keyPressWhite(key17);
 });
 
 // F
 key18.addEventListener("click", () => {
   new Audio("../public/keys//HIGHER-OCTAVE/698-F.mp3").play();
+  console.log("Octava alta F");
   keyPressWhite(key18);
 });
 key19.addEventListener("click", () => {
   new Audio("../public/keys//HIGHER-OCTAVE/698-F-sharp.mp3").play();
+  console.log("Octava alta F sharp");
   keyPressBlack(black8);
 });
 
 // G
 key20.addEventListener("click", () => {
   new Audio("../public/keys//HIGHER-OCTAVE/783-G.mp3").play();
+  console.log("Octava alta G");
   keyPressWhite(key20);
 });
 key21.addEventListener("click", () => {
   new Audio("../public/keys//HIGHER-OCTAVE/830-G-sharp.mp3").play();
+  console.log("Octava alta G sharp");
   keyPressBlack(black9);
 });
 
 // A
 key22.addEventListener("click", () => {
   new Audio("../public/keys//HIGHER-OCTAVE/880-A.mp3").play();
+  console.log("Octava alta A");
   keyPressWhite(key22);
 });
 key23.addEventListener("click", () => {
   new Audio("../public/keys//HIGHER-OCTAVE/932-A-sharp.mp3").play();
+  console.log("Octava alta A sharp");
   keyPressBlack(black10);
 });
 // B
 key24.addEventListener("click", () => {
   new Audio("../public/keys//HIGHER-OCTAVE/987-B.mp3").play();
+  console.log("Octava alta B");
   keyPressWhite(key24);
 });
 // C
 key25.addEventListener("click", () => {
   new Audio("../public/keys//HIGHER-OCTAVE/1046-C.mp3").play();
+  console.log("Octava alta C");
   keyPressWhite(key25);
 });
 

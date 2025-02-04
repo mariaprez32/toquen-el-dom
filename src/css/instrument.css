@@ -65,6 +65,22 @@
   align-items: center;
 }
 
+.piano__description1 {
+    margin-top: -45vh;
+    width: 130vh;
+    margin-bottom: 4vh;
+}
+
+.piano__description1 h3 {
+    font-family: var(--title-font);
+    font-size: larger;
+    text-align: center;
+    margin-bottom: 2vh;
+}
+.piano__description1 p {
+    font-family: var(--main-font);
+    text-align: justify;
+}
 .keys__container {
   background-color: var(--primary-color);
   border-radius: 10px;
