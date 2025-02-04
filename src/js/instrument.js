@@ -140,79 +140,66 @@ key12.addEventListener("click", () => {
 // C
 key13.addEventListener("click", () => {
   new Audio("../public/keys//HIGHER-OCTAVE/523-C.mp3").play();
-  console.log("Octava alta C");
   keyPressWhite(key13);
 });
 key14.addEventListener("click", () => {
   new Audio("../public/keys//HIGHER-OCTAVE/545-C-sharp.mp3").play();
-  console.log("Octava alta C sharp");
   keyPressBlack(black6);
 });
 
 // D
 key15.addEventListener("click", () => {
   new Audio("../public/keys//HIGHER-OCTAVE/587-D.mp3").play();
-  console.log("Octava alta D");
   keyPressWhite(key15);
 });
 key16.addEventListener("click", () => {
   new Audio("../public/keys//HIGHER-OCTAVE/622-D-sharp.mp3").play();
-  console.log("Octava alta D sharp");
   keyPressBlack(black7);
 });
 
 // E
 key17.addEventListener("click", () => {
   new Audio("../public/keys//HIGHER-OCTAVE/659-E.mp3").play();
-  console.log("Octava alta E");
   keyPressWhite(key17);
 });
 
 // F
 key18.addEventListener("click", () => {
   new Audio("../public/keys//HIGHER-OCTAVE/698-F.mp3").play();
-  console.log("Octava alta F");
   keyPressWhite(key18);
 });
 key19.addEventListener("click", () => {
   new Audio("../public/keys//HIGHER-OCTAVE/698-F-sharp.mp3").play();
-  console.log("Octava alta F sharp");
   keyPressBlack(black8);
 });
 
 // G
 key20.addEventListener("click", () => {
   new Audio("../public/keys//HIGHER-OCTAVE/783-G.mp3").play();
-  console.log("Octava alta G");
   keyPressWhite(key20);
 });
 key21.addEventListener("click", () => {
   new Audio("../public/keys//HIGHER-OCTAVE/830-G-sharp.mp3").play();
-  console.log("Octava alta G sharp");
   keyPressBlack(black9);
 });
 
 // A
 key22.addEventListener("click", () => {
   new Audio("../public/keys//HIGHER-OCTAVE/880-A.mp3").play();
-  console.log("Octava alta A");
   keyPressWhite(key22);
 });
 key23.addEventListener("click", () => {
   new Audio("../public/keys//HIGHER-OCTAVE/932-A-sharp.mp3").play();
-  console.log("Octava alta A sharp");
   keyPressBlack(black10);
 });
 // B
 key24.addEventListener("click", () => {
   new Audio("../public/keys//HIGHER-OCTAVE/987-B.mp3").play();
-  console.log("Octava alta B");
   keyPressWhite(key24);
 });
 // C
 key25.addEventListener("click", () => {
   new Audio("../public/keys//HIGHER-OCTAVE/1046-C.mp3").play();
-  console.log("Octava alta C");
   keyPressWhite(key25);
 });
 
