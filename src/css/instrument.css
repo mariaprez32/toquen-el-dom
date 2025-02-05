@@ -123,6 +123,51 @@
   font-family: var(--main-font);
 }
 /* ------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+
+.tutorial-section {
+  background-color: var(--tertiary-color);
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.tutorial-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.tutorial-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  text-align: center;
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+}
+
+.tutorial-subtitle {
+  font-family: 'Lato', sans-serif;
+  text-align: center;
+  font-size: 1.2rem;
+  color: #555;
+  margin-bottom: 2rem;
+}
+
+.tutorial-video {
+  max-width: 800px;
+  margin: 0 auto 2rem;
+  border-radius: 10px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  overflow: hidden;
+}
+
+.tutorial-video iframe {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+}
+
+
+
+
 .keys__container {
   background-color: var(--primary-color);
   border-radius: 10px;
