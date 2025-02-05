@@ -102,7 +102,7 @@
   background-color: #ccc;
 }
 
-.piano__instructions-Text {
+.piano__instructions {
   padding: 0 18px;
   display: none;
   overflow: hidden;
@@ -110,12 +110,12 @@
   width: 50vh;
 }
 
-.piano__instructions-Text h3 {
+.piano__instructions h3 {
   text-align: center;
   margin-bottom: 2vh;
   font-family: var(--title-font);
 }
-.piano__instructions-Text ul{
+.piano__instructions ul{
   columns: 2;
   -webkit-columns: 2;
   -moz-columns: 2;
