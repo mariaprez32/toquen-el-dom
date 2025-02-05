@@ -2,7 +2,7 @@
 ![¡Bienvenidos a TOQUEN EL DOM!](/public/images/home.png)
 
 ## Descripción
-"Toquen el DOM" es un proyecto web educativo diseñado para enseñar a los usuarios sobre la manipulación del DOM (Document Object Model) utilizando HTML, CSS y JavaScript. El sitio web incluye varias páginas que muestran diferentes instrumentos musicales y proporciona información sobre los profesores que enseñan a tocarlos. Y para que sea mas interactivo hemos creado un piano el cual podrás tocar y recrear tu canción favorita. Para un buen uso del mismo hemos añadido un video con un pequeño ejemplo.
+"Toquen el DOM" es un proyecto web educativo diseñado para enseñar a los usuarios sobre la manipulación del DOM (Document Object Model) utilizando HTML, CSS y JavaScript. El sitio web incluye varias páginas que muestran diferentes instrumentos musicales y proporciona información sobre los profesores que enseñan a tocarlos. Y para que sea mas interactivo hemos creado un piano el cual podrás tocar y recrear tu canción favorita. Para un buen uso del mismo hemos añadido un video con un pequeño ejemplo. 
 
 ## Estructura del Proyecto
 El proyecto tiene la siguiente estructura de directorios:
