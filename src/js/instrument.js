@@ -305,7 +305,7 @@ document.addEventListener("keydown", function (e) {
     new Audio("../public/keys//HIGHER-OCTAVE/880-A.mp3").play();
     keyPressWhite(key22);
   }
-  if (e.key === "[") {
+  if (e.key === "[" || e.key === "+") {
     new Audio("../public/keys//HIGHER-OCTAVE/932-A-sharp.mp3").play();
     keyPressBlack(black10);
   }
