@@ -28,6 +28,9 @@
     />
 
     <link rel="icon" type="image/icon" href="../public/images/logo_Icon.ico" />
+
+    <script src="../src/js/instrument.js" defer></script>
+    <script src="../src/js/main.js" defer></script>
   </head>
 
   <body>
@@ -168,8 +171,9 @@
         </div>
       </div>
 
-      <div class="piano__description2">
-        <h3>Los sonidos del simulador de piano:</h3>
+      <div class="piano__instructions">
+      <button type="button" class="collapsible"><h3>Los sonidos del simulador de piano</h3></button>
+      <div class="piano__instructions-Text">
         <ul>
           <li>A = Do mayor.</li>
           <li>W = Do mayor sostenido.</li>
@@ -198,6 +202,7 @@
           <li>M = Do en otra octava mayor.</li>
         </ul>
       </div>
+    </div>
     </main>
 
     <footer class="footer">
@@ -224,8 +229,5 @@
         </div>
       </div>
     </footer>
-
-    <script src="../src/js/instrument.js"></script>
-    <script src="../src/js/main.js"></script>
   </body>
 </html>
