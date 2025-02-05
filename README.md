@@ -37,7 +37,7 @@ El proyecto tiene la siguiente estructura de directorios:
 - María Alejandra Pérez Torres
 - Saturnino Méndez Cantarero
 - Rafael Fernández Rodríguez
-- Cristina Caballero Díaz
+- Cristina Caballero Díaz [CristinaCabDi]
 
 ## Licencia
 Este proyecto está licenciado bajo la Licencia MIT. [Consulta el archivo](LICENSE.md) para obtener más detalles.
