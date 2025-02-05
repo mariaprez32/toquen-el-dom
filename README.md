@@ -40,4 +40,4 @@ El proyecto tiene la siguiente estructura de directorios:
 - Cristina Caballero Díaz
 
 ## Licencia
-Este proyecto está licenciado bajo la Licencia MIT. Consulta el archivo `LICENSE` para obtener más detalles.
+Este proyecto está licenciado bajo la Licencia MIT. [Consulta el archivo](LICENSE.md) para obtener más detalles.
