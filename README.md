@@ -34,10 +34,10 @@ El proyecto tiene la siguiente estructura de directorios:
 - JavaScript: Lógica del reproductor.
 
 ## Autores
-- María Alejandra Pérez Torres
-- Saturnino Méndez Cantarero
-- Rafael Fernández Rodríguez
-- Cristina Caballero Díaz [CristinaCabDi]
+- [María Alejandra Pérez Torres](https://github.com/mariaprez32)
+- [Saturnino Méndez Cantarero](https://github.com/FrostyValue)
+- [Rafael Fernández Rodríguez](https://github.com/FaloCurso)
+- [Cristina Caballero Díaz](https://github.com/CristinaCabdi)
 
 ## Licencia
 Este proyecto está licenciado bajo la Licencia MIT. [Consulta el archivo](LICENSE.md) para obtener más detalles.
