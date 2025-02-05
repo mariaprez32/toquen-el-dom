@@ -34,7 +34,7 @@ El proyecto tiene la siguiente estructura de directorios:
 - JavaScript: Lógica del reproductor.
 
 ## Autores
-- María Pérez
+- María Alejandra Pérez Torres
 - Saturnino Méndez Cantarero
 - Rafael Fernández Rodríguez
 - Cristina Caballero Díaz
