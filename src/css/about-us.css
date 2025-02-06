@@ -90,13 +90,14 @@
 h1{
   font-family:'Playfair display', sans-serif;
   text-align: center;
-  padding-top: 15vh;
+  padding-top: 9vh;
+  
 }
 
 .cardscontainer {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 2rem;
+  gap: 5rem;
   justify-content: center;
   padding: 2rem 0; 
   margin: 0 auto; 
@@ -118,7 +119,7 @@ h1{
   position: relative;
   width: 30vh;
   height: 50vh;
-  margin-top: 2vh;
+  margin-top: 7vh;
   flex-shrink: 0; 
   display: flex;
   flex-direction: column;
@@ -274,21 +275,22 @@ a{
 /* Para tablets (2 cards por fila) */
 @media (max-width: 1024px) {
   .cardscontainer {
-    grid-template-columns: repeat(2, 1fr); /* 2 columnas */
+    grid-template-columns: repeat(2, 1fr); 
+
   }
 }
 
 /* Para móviles (1 card por fila) */
 @media (max-width: 768px) {
   .cardscontainer {
-    grid-template-columns: 1fr; /* 1 columna */
+    grid-template-columns: 1fr; 
     justify-items: center;
     justify-content: center;
+    padding: 2rem 1rem;
   }
 
 .card{
   width: 100%;
- /* max-width: 300px;*/
 }
 
   .navbar__hamburger {
