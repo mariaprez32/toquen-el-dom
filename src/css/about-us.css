@@ -273,10 +273,18 @@ a{
 
 
 /* Para tablets (2 cards por fila) */
-@media (max-width: 1024px) {
+@media (min-width: 769px) and (max-width: 1024px) {
   .cardscontainer {
     grid-template-columns: repeat(2, 1fr); 
+    justify-items: center; 
+    justify-content: center; 
+    gap: 2rem; 
+    padding: 2rem 1rem; 
+  }
 
+  .card {
+    width: 100%; 
+    max-width: 350px; 
   }
 }
 
