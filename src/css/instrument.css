@@ -13,6 +13,8 @@
     --title-font: "Playfair display", sans-serif;
     --main-font: "Lato", sans-serif;
   }
+
+
 /* Mensaje de orientación */
 
 .orientation-message {
@@ -21,28 +23,41 @@
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.9);
+  height: 100vh; 
+  background-color: rgba(0, 0, 0, 0.95);
   z-index: 2000;
+  padding: 20px;
+  display: none; 
   justify-content: center;
   align-items: center;
   flex-direction: column;
   text-align: center;
-  color: var(--secondary-color);
-  padding: 20px;
+}
+
+.orientation-message.active {
+  display: flex; 
 }
 
 .orientation-message i {
-  font-size: 4rem;
   margin-bottom: 1rem;
-  animation: rotate 2s infinite;
+  font-size: clamp(3rem, 5vw, 4rem); 
+  margin-bottom: 1rem;
+  color: var(--secondary-color);
+  animation: rotate 2s infinite ease-in-out;
 }
 
 .orientation-message p {
-  font-size: 1.2rem;
+  max-width: 100%; /* Asegurar que el texto no sobrepase el ancho */
+  width: 100%;
+  text-align: center;
+  font-size: clamp(1rem, 3vw, 1.2rem); 
   font-family: var(--main-font);
-  margin: 10px 0;
+  margin: 5px 0;
+  color: var(--secondary-color);
+  max-width: 90%; 
 }
+
+
 
 @keyframes rotate {
   0% {
@@ -57,17 +72,18 @@
 }
 
 .piano {
-  padding: 90px 30px 0 30px;
+  padding: clamp(60px, 10vh, 90px) 15px 0;
+  min-height: 100vh;
+  width: 100%;
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
-  justify-content: center;
   align-items: center;
+  gap: 2rem;
 }
 
 .piano__description1 {
-    width: 130vh;
-    margin-bottom: 4vh;
+  width: min(130vh, 90%);
+  margin-bottom: 4vh;
 }
 
 .piano__description1 h3 {
@@ -449,11 +465,94 @@ a {
   color: var(--secondary-color);
 }
 
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(90deg);
+  }
+  100% {
+    transform: rotate(90deg);
+  }
+}
+
 /* Tablet Styles */
 @media screen and (max-width: 992px) {
-  .orientation-message {
+
+  .piano {
+    width: 100%;
+    max-width: 100%;
+    padding: 90px 15px 0;
     display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-x: hidden;
   }
+
+  .keys__container {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  .piano__description1,
+  .collapsible__container,
+  .tutorial-container {
+  width: 100%;
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+  padding: 0 10px;
+  box-sizing: border-box;
+}
+
+  @media (orientation: portrait) {
+    .orientation-message {
+      display: flex;
+    }
+    
+    .piano {
+      opacity: 0.3; /* Atenúa el piano mientras se muestra el mensaje */
+      pointer-events: none; /* Deshabilita interacciones */
+    }
+  }
+
+  @media (orientation: landscape) {
+    .orientation-message {
+      display: none;
+    }
+    
+    .piano {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    .white-key {
+      width: clamp(30px, 4vw, 35px);
+      height: clamp(120px, 15vh, 150px);
+    }
+
+    .black-key {
+      width: clamp(18px, 2.5vw, 20px);
+      height: clamp(70px, 9vh, 90px);
+    }
+    
+    /* Posiciones dinámicas para teclas negras en landscape */
+    .black-key:nth-child(1) { left: calc(clamp(30px, 4vw, 35px) * 0.71); }
+    .black-key:nth-child(2) { left: calc(clamp(30px, 4vw, 35px) * 1.74); }
+    .black-key:nth-child(3) { left: calc(clamp(30px, 4vw, 35px) * 3.80); }
+    .black-key:nth-child(4) { left: calc(clamp(30px, 4vw, 35px) * 4.83); }
+    .black-key:nth-child(5) { left: calc(clamp(30px, 4vw, 35px) * 5.86); }
+    .black-key:nth-child(6) { left: calc(clamp(30px, 4vw, 35px) * 7.91); }
+    .black-key:nth-child(7) { left: calc(clamp(30px, 4vw, 35px) * 8.94); }
+    .black-key:nth-child(8) { left: calc(clamp(30px, 4vw, 35px) * 11); }
+    .black-key:nth-child(9) { left: calc(clamp(30px, 4vw, 35px) * 12.03); }
+    .black-key:nth-child(10) { left: calc(clamp(30px, 4vw, 35px) * 13.06); }
+  }
+
 
   .navbar__hamburger {
     display: block;
@@ -573,9 +672,23 @@ a {
 
 /* Mobile Styles */
 @media screen and (max-width: 576px) {
-  /* .orientation-message {
-    display: none;
-  } */
+
+  .piano__description1 {
+    width: 95%;
+  }
+
+  .piano__description1 h3 {
+    font-size: 1.2rem;
+  }
+
+  .piano__description1 p {
+    font-size: 0.9rem;
+  }
+
+  .collapsible h3 {
+    font-size: 1rem;
+  }
+
 
   /* Footer */
   .footer {
@@ -656,4 +769,5 @@ a {
   .black-key:nth-child(10) {
     left: 457px;
   }
-}
+} 
+
