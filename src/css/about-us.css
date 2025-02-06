@@ -1,12 +1,12 @@
+
 *{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: sans-serif;
- 
 }
  
-/* Navbar c*/
+/* Navbar */
 
 .navbar{
   padding: 1rem 2rem;
@@ -56,40 +56,6 @@
 .navbar__menu--link:hover{
   color:#387184;
 }
-.navbar__hamburger {
-  display: none; /* Se mostrará en mobile */
-  width: 30px;
-  height: 24px;
-  position: relative;
-  background: transparent;
-  border: none;
-  cursor: pointer;
-  padding: 0;
-  z-index: 10;
-}
-
-.navbar__hamburger span {
-  position: absolute;
-  width: 100%;
-  height: 3px;
-  background-color: #000; /* Color negro para las líneas */
-  left: 0;
-  transition: all 0.3s ease;
-}
-
-
-.navbar__hamburger span:nth-child(1) {
-  top: 0;
-}
-
-.navbar__hamburger span:nth-child(2) {
-  top: 50%;
-  transform: translateY(-50%);
-}
-
-.navbar__hamburger span:nth-child(3) {
-  bottom: 0;
-}
 
 h1{
   font-family:'Playfair display', sans-serif;
@@ -99,19 +65,22 @@ h1{
 
 .cardscontainer {
   display: grid;
-  grid-template-columns: repeat(4, 1fr); /* 4 columnas en pantallas grandes */
+  grid-template-columns: repeat(4, 1fr);
   gap: 2rem;
   justify-content: center;
-  padding: 2rem;
-  margin-left: 8vh;
-  margin-right: -10vh;
-  margin-top: 6vh;
+  padding: 2rem 0; /* Eliminar márgenes laterales */
+  margin: 0 auto; /* Centrar el contenedor de tarjetas */
+  width: 100%; /* Asegurar que ocupe todo el ancho */
+  max-width: 1200px; /* Limitar el ancho máximo */
 }
 
 
 .container3{
-  width: 100vw;
-  min-height: 100vh;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+  padding-bottom: 150px;
 }
 
 
@@ -217,11 +186,10 @@ h1{
   background: black; 
   color: white; 
   padding: 2rem 6rem;
-  position: relative; 
+  /* position: fixed;  */
   bottom: 0;
   width: 100%;
   margin-top: auto;
-  margin-bottom: 0;
 }
 
 .footer__social--link{
@@ -256,7 +224,7 @@ h1{
   margin-right: 2.7rem;
 
 }
-.footer__title span {
+span {
   background: linear-gradient(to right, #ef5350, #f48fb1, #7e57c2, #2196f3, #26c6da, #43a047, #eeff41, #f9a825, #ff5722);
 -webkit-background-clip: text; 
 background-clip: text;
@@ -286,48 +254,6 @@ a{
   .cardscontainer {
     grid-template-columns: 1fr; /* 1 columna */
   }
-  .navbar__hamburger {
-    display: block;
-}
-
-/* Animación cuando está activo */
-.navbar__hamburger.active span:nth-child(1) {
-    transform: rotate(45deg);
-    top: 50%;
-}
-
-.navbar__hamburger.active span:nth-child(2) {
-    opacity: 0;
-}
-
-.navbar__hamburger.active span:nth-child(3) {
-    transform: rotate(-45deg);
-    top: 50%;
-}
-
-.navbar__menu {
-    display: none;
-    position: absolute;
-    top: 70px;
-    left: 0;
-    width: 100%;
-    background-color: #F5F5F5;
-    padding: 20px 0;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-.navbar__menu.active {
-    display: block;
-}
-
-.navbar__menu--list {
-    flex-direction: column;
-    gap: 20px;
-}
-
-.navbar__menu--item {
-    text-align: center;
-}
 /* Footer */
 .footer {
   padding: 2rem 1.5rem;
@@ -351,5 +277,8 @@ a{
 i {
   font-size: 2.2rem;
 }
+}
 
+body{
+  min-height: 100vh;
 }
