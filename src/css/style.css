@@ -224,6 +224,7 @@ img{
     display: flex;
     padding: 25px;
     gap: 50px;
+    justify-content: center;
 }
 
 .instrument, .instrument__guitarra, .instrument__bateria, .instrument__saxofon {
@@ -249,7 +250,7 @@ img{
 
 
 .card__container{
-    width: auto;
+    width: calc(100% - 210px); /* 190px de la imagen + 20px del gap */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -261,16 +262,27 @@ img{
 }
 
 .instrument{
+    width: 1000px;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    align-items: flex-start;
+    justify-content: space-between;
     gap: 20px;
+    padding: 20px;
 }
 
-.instrument img{
+.instrument figure {
     width: 190px;
     height: 220px;
-    object-fit: cover;
+    overflow: hidden;
+    flex-shrink: 0; /* Evita que la imagen se encoja */
+}
+
+/* Ajustar las imágenes */
+.instrument img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* Cambiado a contain para evitar cortes */
+    object-position: center;
 }
 
 .card {
@@ -278,6 +290,8 @@ img{
 }
 
 .card__container button {
+    width: auto;
+    max-width: 100%;
     font-size: 18px;
     letter-spacing: 2px;
     text-transform: uppercase;
@@ -324,9 +338,11 @@ img{
     transform: scale(0.9);
   }
 
-  p{
+  .card__container p {
+    width: 100%;
+    margin-bottom: 20px;
     text-align: justify;
-  }
+}
 
 
  /* Footer */
@@ -390,7 +406,7 @@ a{
 
 
 /* Tablet Styles */
-@media screen and (max-width: 992px) {
+@media screen and (max-width: 1024px) {
     
     .navbar__hamburger {
         display: block;
@@ -483,7 +499,13 @@ a{
     }
 
     .instrument {
-        padding: 15px;
+        width: 100%;
+        /* max-width: 500px; */
+        margin: 0 auto;
+    }
+
+    .card__container {
+        width: calc(100% - 210px);
     }
 
     .card {
@@ -541,10 +563,23 @@ a{
         display: none;
     }
 
-    /* Instruments */
     .instrument {
         flex-direction: column;
-        text-align: center;
+        align-items: center;
+        padding: 15px;
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .instrument figure {
+        width: 160px;
+        height: 190px;
+        margin: 0 auto;
+    }
+
+    .card__container {
+        width: 100%;
+        flex-direction: column;
     }
 
     .instrument img {
