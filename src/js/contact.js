@@ -47,7 +47,7 @@ document.getElementById("enviar").addEventListener("click", function () {
          }
 
          if (mensaje === "") {
-                errores.push("Te as olvidado de escribir el mensaje.");
+                errores.push("Te has olvidado de escribir el mensaje.");
                 document.getElementById("mensaje").style.borderColor = "#FF0072";
          }else{
             document.getElementById("mensaje").style.borderColor = "#ccc";

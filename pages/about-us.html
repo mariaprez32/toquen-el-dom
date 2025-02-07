@@ -1,14 +1,146 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>About-us</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../src/css/about-us.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="icon" type="image/icon" href="../public/images/logo_Icon.ico">
+
 </head>
 
 <body>
+    <nav class="navbar">
+        <div class="navbar__container">
+            <div class="navbar__logo">
+                <img src="../public/images/logo.webp" alt="">
+            </div>
+            <button class="navbar__hamburger" id="hamburger-btn">
+                <span class="span"></span>
+                <span class="span"></span>
+                <span class="span"></span>
+            </button>
+            <div class="navbar__menu" id="nav-menu">
+                <ul class="navbar__menu--list">
+                    <li class="navbar__menu--item">
+                        <a href="../index.html" class="navbar__menu--link">Home</a>
+                    </li>
+                    <li class="navbar__menu--item">
+                        <a href="/pages/instrument.html" class="navbar__menu--link">Instrumento</a>
+                    </li>
+                    <li class="navbar__menu--item">
+                        <a href="/pages/about-us.html" class="navbar__menu--link">About us</a>
+                    </li>
+                    <li class="navbar__menu--item">
+                        <a href="/pages/contact.html" class="navbar__menu--link">Contacto</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 
+    <div class="container3">
+        <h1>Nuestros profesores</h1>
+        <div class="cardscontainer">
+            <div class="card">
+                <div class="face front">
+                    <img src="../public/images/i_piano.webp" alt="avatar Piano">
+                </div>
+                <div class="face back">
+                    <h2>MARÍA</h2>
+                    <img src="../public/images/maria.webp" alt="avatar María" width="90">
+                    <p> Me presentó soy María, me encanta tocar el piano, siempre me han dicho que con mi música
+                        transporto a la gente a la antigua Venecia. ¿Te atreves a comprobarlo?</p>
+                    <div class="link">
+                        <a href="#">Inscribete</a>
+                    </div>
+                </div>
+
+            </div>
+            <div class="card">
+                <div class="face front">
+                    <img src="../public/images/guitarra.webp" alt="avatar Guitarra">
+                </div>
+                <div class="face back">
+                    <h2>RAFAEL</h2>
+                    <img src="../public/images/falo.webp" alt="avatar Falo" width="90">
+                    <p> Yo soy Rafael, aunque me gusta que me llamen Falo. Soy el profesor de guitarra y conmigo podrás
+                        aprender a tocar la canción que quieras. Aunque a mi lo más que me gusta es el flamenco</p>
+                    <div class="link">
+                        <a href="#">Inscribete</a>
+                    </div>
+                </div>
+
+            </div>
+            <div class="card">
+                <div class="face front">
+                    <img src="../public/images/bateria copia.webp" alt="avatar Batería">
+                </div>
+                <div class="face back">
+                    <h2>SATURNINO</h2>
+                    <img src="../public/images/saturnino.webp" alt="avatar Saturnino" width="90">
+                    <p> Yo soy vuestro baterista de confianza. Siempre estoy en busca de nuevos sonidos y experimentos
+                        musicales que desafíen los límites. ¿Te animas a realizar la búsqueda conmigo?</p>
+                    <div class="link">
+                        <a href="#">Inscribete</a>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="face front">
+                    <img src="../public/images/saxo.webp" alt="avatar Saxofon">
+                </div>
+                <div class="face back">
+                    <h2>CRISTINA</h2>
+                    <img src="../public/images/Cristina.webp" alt="avatar Cristina" width="90">
+                    <p> Hola, yo soy Cristina. Soy una saxofonista con más de 10 años de experiencia en el escenario,
+                        pero ahora estoy aquí para transmitirte mi pasión por la música.</p>
+                    <div class="link">
+                        <a href="#">Inscribete</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <footer class="footer">
+        <div class="footer__container">
+            <div class="footer__about">
+                <h4 class="footer__title"><span>Toquen el DOM</span></h4>
+                <p class="footer__description">
+                    Donde la pasión por el arte sonoro se une con métodos innovadores de enseñanza. Formamos músicos con
+                    excelencia técnica y creatividad sin límites.
+                </p>
+            </div>
+
+            <div class="footer__social">
+                <a href="#" class="footer__social--insta">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+                <a href="#" class="footer__social--x">
+                    <i class="fa-brands fa-x-twitter"></i>
+                </a>
+                <a href="#" class="footer__social--facebook">
+                    <i class="fa-brands fa-facebook"></i>
+                </a>
+
+            </div>
+        </div>
+    </footer>
+    <script src="../src/js/main.js"></script>
 </body>
 
 </html>
