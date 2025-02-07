@@ -278,12 +278,12 @@ document.addEventListener("keydown", function (e) {
     keyPressBlack(black7);
   }
   // E
-  if (e.key === ";") {
+  if (e.key === ";" || e.key === "ñ") {
     new Audio("../public/keys//HIGHER-OCTAVE/659-E.mp3").play();
     keyPressWhite(key17);
   }
   //FFFFFFF
-  if (e.key === '"') {
+  if (e.key === '"' || e.key === "ç") {
     new Audio("../public/keys//HIGHER-OCTAVE/698-F.mp3").play();
     keyPressWhite(key18);
   }
