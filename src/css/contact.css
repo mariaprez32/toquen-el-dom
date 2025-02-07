@@ -108,17 +108,23 @@ body {
     font-family: var(--main-font), var(--title-font);
     background-color: var(--secondary-color);
     color: var(--primary-color);
+    margin: 0;
+    padding: 0;
+    min-height: 100vh; 
+    display: flex;
+    flex-direction: column; 
 }
 
 .formulario {
    /*background-color: green;*/
-    height: 63vh;
+    /*height: 75.7vh;*/
     display: flex;
-    margin-top: 100px;
     justify-content: center;
     align-items: center;
     gap: 20px;
     padding: 20px;
+    flex-grow: 1; /* Permite que el formulario crezca para ocupar el espacio restante */
+    margin-top: 1rem;
     
 }
 
@@ -187,6 +193,8 @@ body {
     background: var(--primary-color);
     color: var(--secondary-color);
     padding: 2rem 6rem;
+   /* margin-top: auto; Empuja el footer al fondo */
+    /*width: 100%;*/
 }
 
 .footer__social--link{
@@ -350,6 +358,7 @@ a{
         gap: 20px; 
         min-height: auto;  /* Permite que el contenido fluya sin problemas */
         padding: 60px 20px;
+        margin-top: 0; 
     }
 
     .form--contenedor__bizq {
@@ -367,7 +376,7 @@ a{
   /* Footer */
   .footer {
     padding: 2rem 1.5rem;
-    margin-top: 40px;
+    margin-top: 20px;
 }
 
 .footer__container {
@@ -389,4 +398,3 @@ i {
     font-size: 2.2rem;
 }
 }
-
