@@ -91,6 +91,7 @@
     font-size: larger;
     text-align: center;
     margin-bottom: 2vh;
+    font-size: 1.7rem;
 }
 .piano__description1 p {
     font-family: var(--main-font);
@@ -170,7 +171,7 @@
 
 .tutorial-title {
   font-family: 'Playfair Display', serif;
-  font-size: 2rem;
+  font-size: 1.8rem;
   text-align: center;
   color: var(--primary-color);
   margin-bottom: 1rem;
