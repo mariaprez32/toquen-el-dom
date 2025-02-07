@@ -76,11 +76,9 @@ img{
     color: var(--quaternary-color);
 }
 
-/* Estilos base del botón hamburguesa */
-
 .navbar__hamburger {
-    display: none; /* Se mostrará en mobile */
-    width: 30px;
+    display: none;
+    width: 30px; 
     height: 24px;
     position: relative;
     background: transparent;
@@ -93,26 +91,39 @@ img{
 .navbar__hamburger span {
     position: absolute;
     width: 100%;
-    height: 3px;
-    background-color: #000; /* Color negro para las líneas */
+    height: 3px; 
+    background-color: #000;
     left: 0;
     transition: all 0.3s ease;
+    transform-origin: center; 
 }
-
 
 .navbar__hamburger span:nth-child(1) {
     top: 0;
 }
 
 .navbar__hamburger span:nth-child(2) {
-    top: 50%;
-    transform: translateY(-50%);
+    top: 9px; 
 }
 
 .navbar__hamburger span:nth-child(3) {
-    bottom: 0;
+    top: 18px; 
 }
 
+/* Animaciones cuando está activo */
+
+.navbar__hamburger.active span:nth-child(1) {
+    transform: translateY(9px) rotate(45deg);
+}
+
+.navbar__hamburger.active span:nth-child(2) {
+    opacity: 0;
+    transform: translateX(-20px);
+}
+
+.navbar__hamburger.active span:nth-child(3) {
+    transform: translateY(-9px) rotate(-45deg);
+}
 
 
 /* Hero */
@@ -122,7 +133,6 @@ img{
      no-repeat center / cover;
     height: 1000px;
     width: 100vw;
-    /* padding: 11.5rem 2rem 8rem; */
     color: var(--secondary-color);
     overflow-x: hidden;
     position: relative;
@@ -412,25 +422,10 @@ a{
         display: block;
     }
 
-    /* Animación cuando está activo */
-    .navbar__hamburger.active span:nth-child(1) {
-        transform: rotate(45deg);
-        top: 50%;
-    }
-
-    .navbar__hamburger.active span:nth-child(2) {
-        opacity: 0;
-    }
-
-    .navbar__hamburger.active span:nth-child(3) {
-        transform: rotate(-45deg);
-        top: 50%;
-    }
-
     .navbar__menu {
         display: none;
-        position: absolute;
-        top: 70px;
+        position: fixed;
+        top: 80px;
         left: 0;
         width: 100%;
         background-color: var(--tertiary-color);
@@ -449,19 +444,6 @@ a{
 
     .navbar__menu--item {
         text-align: center;
-    }
-
-    /* Animaciones del botón */
-    .navbar__hamburger.active span:first-child {
-        transform: rotate(45deg) translate(5px, 5px);
-    }
-
-    .navbar__hamburger.active span:nth-child(2) {
-        opacity: 0;
-    }
-
-    .navbar__hamburger.active span:last-child {
-        transform: rotate(-45deg) translate(5px, -5px);
     }
 
     /* Hero */
