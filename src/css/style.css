@@ -185,7 +185,6 @@ img{
 
 .hero__button button {
     padding: 10px 30px;
-    /* background-color: var(--secondary-color); */
     color: var(--primary-color);
     font-size:1.1rem;
     border-radius: 20px;
@@ -238,7 +237,6 @@ img{
 }
 
 .instrument, .instrument__guitarra, .instrument__bateria, .instrument__saxofon {
-    /* background-color: black; */
     margin: 20px 0;
     padding: 20px 20px 30px;
     border-radius: 10px;
@@ -260,7 +258,7 @@ img{
 
 
 .card__container{
-    width: calc(100% - 210px); /* 190px de la imagen + 20px del gap */
+    width: calc(100% - 210px); 
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -284,14 +282,13 @@ img{
     width: 190px;
     height: 220px;
     overflow: hidden;
-    flex-shrink: 0; /* Evita que la imagen se encoja */
+    flex-shrink: 0; 
 }
 
-/* Ajustar las imágenes */
 .instrument img {
     width: 100%;
     height: 100%;
-    object-fit: contain; /* Cambiado a contain para evitar cortes */
+    object-fit: contain; 
     object-position: center;
 }
 
@@ -482,7 +479,6 @@ a{
 
     .instrument {
         width: 100%;
-        /* max-width: 500px; */
         margin: 0 auto;
     }
 
