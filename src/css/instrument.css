@@ -576,7 +576,7 @@ a {
     top: 80px;
     left: 0;
     width: 100%;
-    background-color: var(--tertiary-color);
+    background-color: var(--secondary-color);
     padding: 20px 0;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
