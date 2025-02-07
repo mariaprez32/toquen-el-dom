@@ -365,7 +365,7 @@
 
 .navbar__hamburger {
   display: none;
-  width: 30px;
+  width: 30px; 
   height: 24px;
   position: relative;
   background: transparent;
@@ -378,10 +378,11 @@
 .navbar__hamburger span {
   position: absolute;
   width: 100%;
-  height: 3px;
-  background-color: var(--primary-color);
+  height: 3px; 
+  background-color: #000;
   left: 0;
   transition: all 0.3s ease;
+  transform-origin: center; 
 }
 
 .navbar__hamburger span:nth-child(1) {
@@ -389,13 +390,28 @@
 }
 
 .navbar__hamburger span:nth-child(2) {
-  top: 50%;
-  transform: translateY(-50%);
+  top: 9px; 
 }
 
 .navbar__hamburger span:nth-child(3) {
-  bottom: 0;
+  top: 18px; 
 }
+
+/* Animaciones cuando está activo */
+
+.navbar__hamburger.active span:nth-child(1) {
+  transform: translateY(9px) rotate(45deg);
+}
+
+.navbar__hamburger.active span:nth-child(2) {
+  opacity: 0;
+  transform: translateX(-20px);
+}
+
+.navbar__hamburger.active span:nth-child(3) {
+  transform: translateY(-9px) rotate(-45deg);
+}
+
 
 /* Footer */
 
@@ -553,63 +569,33 @@ a {
     .black-key:nth-child(10) { left: calc(clamp(30px, 4vw, 35px) * 13.06); }
   }
 
-
   .navbar__hamburger {
     display: block;
-  }
+}
 
-  /* Animación cuando está activo */
-  .navbar__hamburger.active span:nth-child(1) {
-    transform: rotate(45deg);
-    top: 50%;
-  }
-
-  .navbar__hamburger.active span:nth-child(2) {
-    opacity: 0;
-  }
-
-  .navbar__hamburger.active span:nth-child(3) {
-    transform: rotate(-45deg);
-    top: 50%;
-  }
-
-  .navbar__menu {
+.navbar__menu {
     display: none;
-    position: absolute;
-    top: 70px;
+    position: fixed;
+    top: 80px;
     left: 0;
     width: 100%;
     background-color: var(--tertiary-color);
     padding: 20px 0;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  }
+}
 
-  .navbar__menu.active {
+.navbar__menu.active {
     display: block;
-  }
+}
 
-  .navbar__menu--list {
+.navbar__menu--list {
     flex-direction: column;
     gap: 20px;
-  }
+}
 
-  .navbar__menu--item {
+.navbar__menu--item {
     text-align: center;
-  }
-
-  /* Animaciones del botón */
-  .navbar__hamburger.active span:first-child {
-    transform: rotate(45deg) translate(5px, 5px);
-  }
-
-  .navbar__hamburger.active span:nth-child(2) {
-    opacity: 0;
-  }
-
-  .navbar__hamburger.active span:last-child {
-    transform: rotate(-45deg) translate(5px, -5px);
-  }
-
+}
   /* Footer */
   .footer {
     padding: 2rem 3rem;
