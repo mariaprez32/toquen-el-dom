@@ -358,10 +358,6 @@
   font-family: var(--title-font);
 }
 
-.navbar__menu--link:hover {
-  color: var(--quaternary-color);
-}
-
 /* botón hamburguesa */
 
 .navbar__hamburger {
