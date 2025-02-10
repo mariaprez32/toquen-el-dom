@@ -4,7 +4,7 @@
 
 ## Descripción
 
-"Toquen el DOM" es un proyecto web educativo diseñado para enseñar a los usuarios sobre la manipulación del DOM (Document Object Model) utilizando HTML, CSS y JavaScript. El sitio web incluye varias páginas que muestran diferentes instrumentos musicales y proporciona información sobre los profesores que enseñan a tocarlos. Y para que sea mas interactivo hemos creado un piano el cual podrás tocar y recrear tu canción favorita. Para un buen uso del mismo hemos añadido un video con un pequeño ejemplo.
+"Toquen el DOM" es un proyecto web educativo diseñado para enseñar a los usuarios sobre la manipulación del DOM (Document Object Model) utilizando HTML, CSS y JavaScript. El sitio web incluye varias páginas que muestran diferentes instrumentos musicales y proporciona información sobre los profesores que enseñan a tocarlos. Y para que sea más interactivo se ha creado un piano el cual podrás tocar y recrear tu canción favorita. Para un buen uso del mismo hemos añadido un video con un pequeño ejemplo.
 
 ## Estructura del Proyecto
 
@@ -46,7 +46,7 @@ El proyecto tiene la siguiente estructura de directorios:
 
 - **index.html**: Página principal del proyecto.
 - **pages/about-us.html**: Página que proporciona información sobre los profesores.
-- **pages/contact.htm**: Página de contacto.
+- **pages/contact.html**: Página de contacto.
 - **pages/in-construction.html**: Página en construcción.
 - **pages/instrument.html**: Página que muestra información sobre los instrumentos.
 
@@ -54,10 +54,12 @@ El proyecto tiene la siguiente estructura de directorios:
 
 - **src/css/style.css**: Archivo CSS principal que contiene los estilos globales del sitio.
 - **src/css/about-us.css**: Archivo CSS específico para la página "About Us".
+- **src/css/contact.css**: Archivo CSS específico para la página de contacto.
 
 ## JavaScript
 
-- **src/js/instrument.js**: Archivo JavaScript que maneja la interacción del menú de navegación y otros comportamientos dinámicos en la página "About Us".
+- **src/js/main.js**: Archivo JavaScript que maneja la lógica principal del sitio, incluyendo el menú hamburguesa.
+- **src/js/contact.js**: Archivo JavaScript que maneja la lógica para el formulario de contacto.
 
 ## Imágenes
 
@@ -97,3 +99,4 @@ Este proyecto está licenciado bajo la Licencia MIT. [Consulta el archivo](LICEN
 - Abre un Pull Request.
 
 ¡Esperamos que disfrutes explorando "Toquen el DOM" y aprendiendo sobre la manipulación del DOM de una manera divertida y musical!
+
