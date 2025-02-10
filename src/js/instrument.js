@@ -36,12 +36,6 @@ const black8 = document.querySelector(".black-8");
 const black9 = document.querySelector(".black-9");
 const black10 = document.querySelector(".black-10");
 
-// /////////////
-// hideBtn.addEventListener('click',  () =>{
-//   console.log("hi");
-
-// });
-
 // *****************
 
 function keyPressWhite(key) {
